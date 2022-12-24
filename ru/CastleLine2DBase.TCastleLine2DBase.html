@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<title>Castle lines 2D: CastleLine2DBase: Класс TCastleLine2DBase</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.16.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2><a href="index.html">Castle lines 2D</a></h2><ul><li><a href="AllUnits.html">Модули</a></li><li><a href="ClassHierarchy.html">Иерархия классов</a></li><li><a href="AllClasses.html">Классы, интерфейсы и объекты</a></li><li><a href="AllTypes.html">Типы</a></li><li><a href="AllVariables.html">Переменные</a></li><li><a href="AllConstants.html">Константы</a></li><li><a href="AllFunctions.html">Процедуры и функции</a></li><li><a href="AllIdentifiers.html">Идентификаторы</a></li><li><form class="search-form" action="tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></div></form>
+<div style="clear: both"></div>
+</li></ul></div><div class="content">
+<p align="right"><a href="../ru/index.html">Русский</a> | <a  href="../en/index.html">English</a> </p>
+<span id="TCastleLine2DBase"></span><h1 class="cio">Класс TCastleLine2DBase</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Описание</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Иерархия</a></div><div class="one_section">Поля</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Методы</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Свойства</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Модуль</h2>
+<p class="unitlink">
+<a href="CastleLine2DBase.html">CastleLine2DBase</a></p>
+<h2 class="declaration">Объявления</h2>
+<p class="declaration">
+<code>type TCastleLine2DBase = class(TCastleAbstractPrimitive)</code></p>
+<h2 class="description">Описание</h2>
+<p>
+Базовый класс для фигур, которые определяются набором вершин <a class="normal" href="CastleLine2DBase.TCastleLine2DBase.html#Points">Points</a>. <strong>Потомки класса должны переопределить метод ReLoad.</strong> Для набора вершин Points предусмотрен редактор свойств Также возможно редактировать набор вершин непосредственно из окна редактора CGE. Для входа в режим редактирования используйте &quot;verb&quot; (Edit mode ON) - правой кнопкой мыши по объекту в окне иерархии объектов.</p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Иерархия</h2>
+<ul class="hierarchy"><li class="ancestor">TCastleAbstractPrimitive</li>
+<li class="thisitem">TCastleLine2DBase</li></ul><h2 class="overview">Обзор</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Методы</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code>procedure <strong><a href="CastleLine2DBase.TCastleLine2DBase.html#SetLineType">SetLineType</a></strong>(NewLineType:<a href="CastleLine2DBase.html#TCastleLineType">TCastleLineType</a>); virtual;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a href="CastleLine2DBase.TCastleLine2DBase.html#Clear">Clear</a></strong>; virtual;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a href="CastleLine2DBase.TCastleLine2DBase.html#CustomSerialization">CustomSerialization</a></strong>(const SerializationProcess: TSerializationProcess); override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a href="CastleLine2DBase.TCastleLine2DBase.html#ReLoad">ReLoad</a></strong>; virtual;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a href="CastleLine2DBase.TCastleLine2DBase.html#SavePointsToFile">SavePointsToFile</a></strong>(const FileName:string);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a href="CastleLine2DBase.TCastleLine2DBase.html#LoadPointsFromFile">LoadPointsFromFile</a></strong>(const FileName:string);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>constructor <strong><a href="CastleLine2DBase.TCastleLine2DBase.html#Create">Create</a></strong>(AOwner: TComponent); override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>destructor <strong><a href="CastleLine2DBase.TCastleLine2DBase.html#Destroy">Destroy</a></strong>; override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <strong><a href="CastleLine2DBase.TCastleLine2DBase.html#PropertySections">PropertySections</a></strong>(const PropertyName: String): TPropertySections; override;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Свойства</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a href="CastleLine2DBase.TCastleLine2DBase.html#EditMode">EditMode</a></strong>: boolean read FEditMode write FEditMode;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><code>property <strong><a href="CastleLine2DBase.TCastleLine2DBase.html#LineType">LineType</a></strong>: <a href="CastleLine2DBase.html#TCastleLineType">TCastleLineType</a> read FLineType write <a href="CastleLine2DBase.TCastleLine2DBase.html#SetLineType">SetLineType</a> default <a href="CastleLine2DBase.html#ltOpen">ltOpen</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><code>property <strong><a href="CastleLine2DBase.TCastleLine2DBase.html#Points">Points</a></strong>: TVector2List read FPoints write FPoints;</code></td>
+</tr>
+</table>
+<h2 class="description">Описание</h2>
+<h3 class="detail">Методы</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><span id="SetLineType"></span><code>procedure <strong>SetLineType</strong>(NewLineType:<a href="CastleLine2DBase.html#TCastleLineType">TCastleLineType</a>); virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Установить тип линии</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Clear"></span><code>procedure <strong>Clear</strong>; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Удалить все точки</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="CustomSerialization"></span><code>procedure <strong>CustomSerialization</strong>(const SerializationProcess: TSerializationProcess); override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ReLoad"></span><code>procedure <strong>ReLoad</strong>; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Построить геометрию заново <strong>Потомки класса должны переопределить этот метод</strong></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SavePointsToFile"></span><code>procedure <strong>SavePointsToFile</strong>(const FileName:string);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Сохранить точки <a class="normal" href="CastleLine2DBase.TCastleLine2DBase.html#Points">Points</a> в файл</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="LoadPointsFromFile"></span><code>procedure <strong>LoadPointsFromFile</strong>(const FileName:string);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Загрузить точки <a class="normal" href="CastleLine2DBase.TCastleLine2DBase.html#Points">Points</a> из файла</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>constructor <strong>Create</strong>(AOwner: TComponent); override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Destroy"></span><code>destructor <strong>Destroy</strong>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="PropertySections"></span><code>function <strong>PropertySections</strong>(const PropertyName: String): TPropertySections; override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<h3 class="detail">Свойства</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="EditMode"></span><code>property <strong>EditMode</strong>: boolean read FEditMode write FEditMode;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Включен ли режим редактирования</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><span id="LineType"></span><code>property <strong>LineType</strong>: <a href="CastleLine2DBase.html#TCastleLineType">TCastleLineType</a> read FLineType write <a href="CastleLine2DBase.TCastleLine2DBase.html#SetLineType">SetLineType</a> default <a href="CastleLine2DBase.html#ltOpen">ltOpen</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Тип линии (обычная линия, замкнутая линия)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><span id="Points"></span><code>property <strong>Points</strong>: TVector2List read FPoints write FPoints;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Точки (вершины) на основе которых потомки выстраивают геометрию</p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Сгенерировал <a href="https://pasdoc.github.io/">PasDoc 0.16.0</a>. </em>
+</span>
+</div></div></body></html>

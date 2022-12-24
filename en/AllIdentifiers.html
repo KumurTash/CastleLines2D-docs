@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Castle lines 2D: All Identifiers</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.16.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2><a href="index.html">Castle lines 2D</a></h2><ul><li><a href="AllUnits.html">Units</a></li><li><a href="ClassHierarchy.html">Class Hierarchy</a></li><li><a href="AllClasses.html">Classes, Interfaces, Objects and Records</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constants</a></li><li><a href="AllFunctions.html">Functions and Procedures</a></li><li><a href="AllIdentifiers.html">Identifiers</a></li><li><form class="search-form" action="tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></div></form>
+<div style="clear: both"></div>
+</li></ul></div><div class="content">
+<p align="right"><a href="../ru/index.html">Русский</a> | <a  href="../en/index.html">English</a> </p>
+<h1 class="allitems">All Identifiers</h1>
+<table class="itemstable wide_list">
+<tr class="listheader">
+<th class="itemname">Name</th>
+<th class="itemunit">Unit</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="CastleLine2DMath.html#AddArcBetweenPoints">AddArcBetweenPoints</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
+<td class="itemdesc"><p>Builds an arc between points A,B with the center at the point Center <br> O - the point of connection of the segments (may coincide with the Center) <br> EdgesCount - number of segments <br> The resulting triangles are added to Arc</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="CastleLine2DMath.html#AddCrossSegments">AddCrossSegments</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
+<td class="itemdesc"><p>Adds triangles to connect two segments at the intersection point outside of these segments. A1:A2 the first segment. B1:B2 is the second segment. O is the junction point of the triangles. <br> As a result, construct triangles (O,A2,cross) and (O,B2,cross).</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="CastleLine2DMath.html#AddHalfBox">AddHalfBox</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
+<td class="itemdesc"><p>Builds a half square on the segment A:B in the opposite direction Opposite</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="CastleLine2DMath.html#AddHalfCircle">AddHalfCircle</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
+<td class="itemdesc"><p>Builds a semicircle on the segment A:B in the opposite direction Opposite <br> EdgesCount - number of segments <br> The resulting triangles are added to Arc</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="CastleLine2DMath.html#AddRect">AddRect</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
+<td class="itemdesc"><p>Builds a rectangle whose axis of symmetry is the segment A:B. <br> Creates 0..5 points 4 point equals 0 point. 5 point equals 2 point <br> 0 point = A.Y-width/2, 1 point = A.Y+width/2, .... <br> width - height (or width) of the rectangle</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="CastleLine2DMath.html#AddTriangle">AddTriangle</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
+<td class="itemdesc"><p>Adds a triangle to the Arc</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="CastleLine2DMath.html#AddTriangleOpposite">AddTriangleOpposite</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
+<td class="itemdesc"><p>Builds a rectangular isosceles triangle on the segment A:B in the opposite direction Opposite</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="CastleLine2DGizmos.html#BORDER_DISTANCE">BORDER_DISTANCE</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DGizmos.html">CastleLine2DGizmos</a></td>
+<td class="itemdesc"><p>Distance to the border. Depends on the current height of the camera</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="CastleLine2DMath.html#CrossingSegments">CrossingSegments</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
+<td class="itemdesc"><p>Intersection of segments A1:A2, B1:B2 <br> 1 if there is one intersection point &quot;CrossPoint&quot; <br> 0 if chunks ar on parallel lines <br> -1 if there are no intersection points</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="CastleLine2DGizmos.html#DISTANCE_INSERT_POINT">DISTANCE_INSERT_POINT</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DGizmos.html">CastleLine2DGizmos</a></td>
+<td class="itemdesc"><p>The distance to the point at which the point is inserted on the line. Depends on the current height of the camera</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="CastleLine2DGizmos.html#DISTANCE_SELECTED_POINT">DISTANCE_SELECTED_POINT</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DGizmos.html">CastleLine2DGizmos</a></td>
+<td class="itemdesc"><p>Distance to the point where the point is highlighted. Depends on the current height of the camera</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="CastleLine2DMath.html#DoFloat">DoFloat</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
+<td class="itemdesc"><p>Converts StringValue to a number by removing the excess. Remain is a non-removable remainder in a string (can be used to ensure that the '-' at the beginning of the line is not deleted)</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="CastleLine2DMath.html#DoGoodTriangle">DoGoodTriangle</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
+<td class="itemdesc"><p>Sorts the vertices of the triangle in clockwise traversal order depending on the &quot;Scale&quot; (in the 2nd and 4th quarters, the order of traversal changes)</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="CastleLine2DGizmos.html#FONT_SIZE">FONT_SIZE</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DGizmos.html">CastleLine2DGizmos</a></td>
+<td class="itemdesc"><p>Font size</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="CastleLine2DMath.html#IsClockwiseTriangle">IsClockwiseTriangle</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
+<td class="itemdesc"><p>If the order of traversal of triangle A,B,C is clockwise, then returns <code>True</code></p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="CastleLine2DGizmos.html#Line2DGizmos">Line2DGizmos</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DGizmos.html">CastleLine2DGizmos</a></td>
+<td class="itemdesc"><p>This object is used to edit all classes inherited from <a class="normal" href="CastleLine2DBase.TCastleLine2DBase.html">TCastleLine2DBase</a> in the CGE editor. When entering edit mode, a new parent is assigned to this object by the Show(ALine:TCastleLine2DBase) method.</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="CastleLine2DGizmos.html#LINE_WIDTH_EDITOR">LINE_WIDTH_EDITOR</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DGizmos.html">CastleLine2DGizmos</a></td>
+<td class="itemdesc"><p>Line width to edit</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="CastleLine2DGizmos.html#POINT_SIZE">POINT_SIZE</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DGizmos.html">CastleLine2DGizmos</a></td>
+<td class="itemdesc"><p>Vertex point size</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="CastleLine2DMath.html#PSDistanceEx">PSDistanceEx</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
+<td class="itemdesc"><p>The minimum distance from the point(P) to the segment(SP1:SP2) with the calculation of the projection point (PP) on the segment. 0 - the point is projected onto the segment: Distance = distance from P to the segment SP1,SP2. PP <br> 1 - point P lies &quot;to left&quot; of SP1: Distance = distance from P to SP1. PP=SP1 <br> 2 - point P lies &quot;to right&quot; of SP2: Distance = distance from P to SP2. PP=SP2</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="CastleLine2D.html#TBeginEndMode">TBeginEndMode</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2D.html">CastleLine2D</a></td>
+<td class="itemdesc"><p>The type of the beginning and end of the line</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="CastleLine2D.TCastleLine2D.html">TCastleLine2D</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2D.html">CastleLine2D</a></td>
+<td class="itemdesc"><p>A polyline consists of rectangles. Has different connection methods for rectangles, various options for the beginning and end of the line. <br> To enter edit mode, use &quot;verb&quot; (Edit mode ON) - right-click on the object in the object hierarchy window.</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="CastleLine2DBase.TCastleLine2DBase.html">TCastleLine2DBase</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DBase.html">CastleLine2DBase</a></td>
+<td class="itemdesc"><p>Base class for shapes that are defined by a set of vertices <a class="normal" href="CastleLine2DBase.TCastleLine2DBase.html#Points">Points</a>. <strong>Inherited classes should override the ReLoad method</strong>.) A property editor is provided for the Points vertex set It is also possible to edit a set of vertices from the CGE editor window. To enter edit mode, use &quot;verb&quot; (Edit mode ON) - right-click on the object in the object hierarchy window.</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="CastleLine2DGizmos.TCastleLine2DGizmos.html">TCastleLine2DGizmos</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DGizmos.html">CastleLine2DGizmos</a></td>
+<td class="itemdesc"><p>Geometry for editing descendants of <a class="normal" href="CastleLine2DBase.TCastleLine2DBase.html">TCastleLine2DBase</a> in the CGE <br> editor Left mouse button - to double the point, move the point <br> Right mouse button - delete the point <br> Middle mouse button - open a window to edit the point <br> To enter edit mode, use &quot;verb&quot; (Edit mode ON) - right-click on the object in the object hierarchy window.</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="CastleLine2DBase.html#TCastleLineType">TCastleLineType</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DBase.html">CastleLine2DBase</a></td>
+<td class="itemdesc"><p>Line type</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="CastlePolygon2D.TCastlePolygon2D.html">TCastlePolygon2D</a></td>
+<td class="itemunit"><a class="bold" href="CastlePolygon2D.html">CastlePolygon2D</a></td>
+<td class="itemdesc"><p>A potentially non-convex polygon. It is constructed from a set of vertices using the triangulation method. <br> To enter edit mode, use &quot;verb&quot; (Edit mode ON) - right-click on the object in the object hierarchy window.</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="CastleLine2DGizmos.html#TEXT_SCALE">TEXT_SCALE</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DGizmos.html">CastleLine2DGizmos</a></td>
+<td class="itemdesc"><p>Text Scale. Depends on the current height of the camera</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="CastleLine2D.html#TJoinMode">TJoinMode</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2D.html">CastleLine2D</a></td>
+<td class="itemdesc"><p>Connection type for rectangles in a line</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="UPointEditor.TPointEditor.html">TPointEditor</a></td>
+<td class="itemunit"><a class="bold" href="UPointEditor.html">UPointEditor</a></td>
+<td class="itemdesc"><p>A class for an editing window for a single point (vertex) <a class="normal" href="CastleLine2DBase.TCastleLine2DBase.html#Points">TCastleLine2DBase.Points[i]</a> from the CGE editor. The window for editing is called by clicking the middle mouse button on the selected point in the JCE editor.</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="UPointEditor.html#TPointEditorResult">TPointEditorResult</a></td>
+<td class="itemunit"><a class="bold" href="UPointEditor.html">UPointEditor</a></td>
+<td class="itemdesc"><p>Result of calling a point editing window</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="UPointsEditor.TPointsEditor.html">TPointsEditor</a></td>
+<td class="itemunit"><a class="bold" href="UPointsEditor.html">UPointsEditor</a></td>
+<td class="itemdesc"><p>The class contains methods for creating and calling a window for editing a set of points (vertices) <a class="normal" href="CastleLine2DBase.TCastleLine2DBase.html#Points">TCastleLine2DBase.Points</a> in the object inspector.</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="UPointsEditor.TStringGridWithOnPasteFromClipboard.html">TStringGridWithOnPasteFromClipboard</a></td>
+<td class="itemunit"><a class="bold" href="UPointsEditor.html">UPointsEditor</a></td>
+<td class="itemdesc"><p>This class augmented with an event that fires after pasting from the clipboard. Used in <a class="normal" href="UPointsEditor.TPointsEditor.html">TPointsEditor</a></p></td>
+</tr>
+</table>
+<hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 0.16.0</a>. </em>
+</span>
+</div></div></body></html>

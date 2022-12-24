@@ -1,0 +1,207 @@
+#UPointsEditor
+TPointsEditor
+#UPointsEditor.TStringGridWithOnPasteFromClipboard
+This class augmented with an event that fires after pasting from the clipboard.
+Used in @link(TPointsEditor)
+#UPointsEditor.TStringGridWithOnPasteFromClipboard.OnPasteFromClipboard
+The event is called after pasting from the clipboard
+#UPointsEditor.TPointsEditor
+The class contains methods for creating and calling a window for editing a set
+of points (vertices) @link(TCastleLine2DBase.Points) in the object inspector.
+#UPointsEditor.TPointsEditor.ShowModal
+Open a window for editing points
+#UPointsEditor.TPointsEditor.ReLoad
+Reload the table
+
+#UPointEditor
+TPointEditor
+#UPointEditor.TPointEditorResult
+Result of calling a point editing window
+#UPointEditor.TPointEditorResult.peCancel
+the "Cancel" button is pressed
+#UPointEditor.TPointEditorResult.peDelete
+the "Delete" button is pressed
+#UPointEditor.TPointEditorResult.peSave
+the "Save" button is pressed
+#UPointEditor.TPointEditor
+A class for an editing window for a single point (vertex)
+@link(TCastleLine2DBase.Points TCastleLine2DBase.Points[i]) from the CGE editor.
+The window for editing is called by clicking the middle mouse button on
+the selected point in the JCE editor.
+#UPointEditor.TPointEditor.ShowModal
+Open a window for editing points.
+index - to display the point number.
+vector - point (vertex).
+#UPointEditor.TPointEditor.ResultVector
+The point (vertex) obtained as a result of editing
+#UPointEditor.TPointEditor.Execute
+Result of calling the window for editing
+
+#CastleLine2DBase
+TCastleLine2DBase
+#CastleLine2DBase.TCastleLineType
+Line type
+#CastleLine2DBase.TCastleLineType.ltOpen
+Open line
+#CastleLine2DBase.TCastleLineType.ltClose
+Closed line
+#CastleLine2DBase.TCastleLine2DBase
+Base class for shapes that are defined by a set of vertices @link(TCastleLine2DBase.Points Points).
+@bold(Inherited classes should override the ReLoad method).)
+A property editor is provided for the Points vertex set
+It is also possible to edit a set of vertices from the CGE editor window.
+To enter edit mode, use "verb" (Edit mode ON) -
+right-click on the object in the object hierarchy window.
+#CastleLine2DBase.TCastleLine2DBase.Clear
+Delete all points
+#CastleLine2DBase.TCastleLine2DBase.ReLoad
+Build geometry again. Inherited classes should override this method
+#CastleLine2DBase.TCastleLine2DBase.SavePointsToFile
+Save points @link(TCastleLine2DBase.Points Points) to a file
+#CastleLine2DBase.TCastleLine2DBase.LoadPointsFromFile
+Load points @link(TCastleLine2DBase.Points Points) from a file
+#CastleLine2DBase.TCastleLine2DBase.EditMode
+Is editing mode enabled
+#CastleLine2DBase.TCastleLine2DBase.LineType
+Line type (open line, closed line)
+#CastleLine2DBase.TCastleLine2DBase.Points
+Points (vertices). Inherited classes should build geometry based on them
+
+#CastleLine2D
+TCastleLine2D
+#CastleLine2D.TJoinMode
+Connection type for rectangles in a line
+#CastleLine2D.TJoinMode.jmBevel
+Beveled edges
+#CastleLine2D.TJoinMode.jmRound
+Rounded edges
+#CastleLine2D.TJoinMode.jmSharp
+Sharp edges
+#CastleLine2D.TBeginEndMode
+The type of the beginning and end of the line
+#CastleLine2D.TBeginEndMode.bmRound
+Semicircle
+#CastleLine2D.TBeginEndMode.bmTriangle
+Triangle
+#CastleLine2D.TBeginEndMode.bmBox
+Half a square
+#CastleLine2D.TCastleLine2D
+A polyline consists of rectangles.
+Has different connection methods for rectangles,
+various options for the beginning and end of the line. @br
+To enter edit mode, use "verb" (Edit mode ON) -
+right-click on the object in the object hierarchy window.
+#CastleLine2D.TCastleLine2D.Create
+When created in the CGE editor, creates a line of two points.
+When creating directly in the code (RunTime), points are not added.
+#CastleLine2D.TCastleLine2D.JoinMode
+Connection type for rectangles in a line
+#CastleLine2D.TCastleLine2D.JoinRoundPrecision
+The number of segments in the circle sector when JoinMode=jmRound
+#CastleLine2D.TCastleLine2D.JoinSharpLimitRad
+With this or a smaller angle between the lines, an acute angle is not built. Used when JoinMode=jmSharp
+#CastleLine2D.TCastleLine2D.JoinBeginMode
+The type of the beginning of the line
+#CastleLine2D.TCastleLine2D.JoinEndMode
+The type of the end of the line
+#CastleLine2D.TCastleLine2D.LineWidth
+Line width
+
+#CastlePolygon2D
+TCastlePolygon2D
+#CastlePolygon2D.TCastlePolygon2D
+A potentially non-convex polygon.
+It is constructed from a set of vertices using the triangulation method. @br
+To enter edit mode, use "verb" (Edit mode ON) -
+right-click on the object in the object hierarchy window.
+#CastlePolygon2D.TCastlePolygon2D.SetLineType
+The line type is always ltClose
+#CastlePolygon2D.TCastlePolygon2D.ReLoad
+When creating in the CGE editor, points forming a star are added.
+When creating directly in the code (RunTime), points are not added.
+#CastlePolygon2D.TCastlePolygon2D.SelfIntersections
+Checking for self-intersection.
+When self-intersecting, the polygon is not displayed.
+
+#CastleLine2DGizmos
+TCastleLine2DGizmos, Line2DGizmos
+#CastleLine2DGizmos.Line2DGizmos
+This object is used to edit all classes inherited from @link(TCastleLine2DBase)
+in the CGE editor. When entering edit mode, a new parent is assigned to this object
+by the Show(ALine:TCastleLine2DBase) method.
+#CastleLine2DGizmos.DISTANCE_SELECTED_POINT
+Distance to the point where the point is highlighted. Depends on the current height of the camera
+#CastleLine2DGizmos.DISTANCE_INSERT_POINT
+The distance to the point at which the point is inserted on the line. Depends on the current height of the camera
+#CastleLine2DGizmos.TEXT_SCALE
+Text Scale. Depends on the current height of the camera
+#CastleLine2DGizmos.FONT_SIZE
+Font size
+#CastleLine2DGizmos.LINE_WIDTH_EDITOR
+Line width to edit
+#CastleLine2DGizmos.POINT_SIZE
+Vertex point size
+#CastleLine2DGizmos.BORDER_DISTANCE
+Distance to the border. Depends on the current height of the camera
+#CastleLine2DGizmos.TCastleLine2DGizmos
+Geometry for editing descendants of @link(TCastleLine2DBase) in the CGE @br editor
+Left mouse button - to double the point, move the point @br
+Right mouse button - delete the point @br
+Middle mouse button - open a window to edit the point @br
+To enter edit mode, use "verb" (Edit mode ON) -
+right-click on the object in the object hierarchy window.
+#CastleLine2DGizmos.TCastleLine2DGizmos.ReLoad
+Build geometry again.
+#CastleLine2DGizmos.TCastleLine2DGizmos.Hide
+Hide the object. Exit Editing mode
+#CastleLine2DGizmos.TCastleLine2DGizmos.Show
+Show the object. Enter Editing mode
+
+#CastleLine2DMath
+The module contains some mathematical methods, as well as methods for constructing
+some primitives.
+#CastleLine2DMath.DoFloat
+Converts StringValue to a number by removing the excess.
+Remain is a non-removable remainder in a string
+(can be used to ensure that the '-' at the beginning of the line is not deleted)
+#CastleLine2DMath.PSDistanceEx
+The minimum distance from the point(P) to the segment(SP1:SP2) with the calculation of the projection point (PP) on the segment.
+0 - the point is projected onto the segment: Distance = distance from P to the segment SP1,SP2. PP @br
+1 - point P lies "to left" of SP1: Distance = distance from P to SP1. PP=SP1 @br
+2 - point P lies "to right" of SP2: Distance = distance from P to SP2. PP=SP2
+#CastleLine2DMath.CrossingSegments
+Intersection of segments A1:A2, B1:B2 @br
+1 if there is one intersection point "CrossPoint" @br
+0 if chunks ar on parallel lines @br
+-1 if there are no intersection points
+#CastleLine2DMath.IsClockwiseTriangle
+If the order of traversal of triangle A,B,C is clockwise, then returns @true
+#CastleLine2DMath.AddArcBetweenPoints
+Builds an arc between points A,B with the center at the point Center @br
+O - the point of connection of the segments (may coincide with the Center) @br
+EdgesCount - number of segments @br
+The resulting triangles are added to Arc
+#CastleLine2DMath.AddHalfCircle
+Builds a semicircle on the segment A:B in the opposite direction Opposite @br
+EdgesCount - number of segments @br
+The resulting triangles are added to Arc
+#CastleLine2DMath.AddTriangle
+Adds a triangle to the Arc
+#CastleLine2DMath.AddTriangleOpposite
+Builds a rectangular isosceles triangle on the segment A:B in the opposite direction Opposite
+#CastleLine2DMath.AddHalfBox
+Builds a half square on the segment A:B in the opposite direction Opposite
+#CastleLine2DMath.AddRect
+Builds a rectangle whose axis of symmetry is the segment A:B. @br
+Creates 0..5 points 4 point equals 0 point. 5 point equals 2 point @br
+0 point = A.Y-width/2, 1 point = A.Y+width/2,  ....  @br
+width - height (or width) of the rectangle
+#CastleLine2DMath.AddCrossSegments
+Adds triangles to connect two segments at the intersection point outside of these segments.
+A1:A2 the first segment.
+B1:B2 is the second segment.
+O is the junction point of the triangles. @br
+As a result, construct triangles (O,A2,cross) and (O,B2,cross).
+#CastleLine2DMath.DoGoodTriangle
+Sorts the vertices of the triangle in clockwise traversal order
+depending on the "Scale" (in the 2nd and 4th quarters, the order of traversal changes)

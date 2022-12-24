@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Castle lines 2D: CastleLine2D: Class TCastleLine2D</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.16.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2><a href="index.html">Castle lines 2D</a></h2><ul><li><a href="AllUnits.html">Units</a></li><li><a href="ClassHierarchy.html">Class Hierarchy</a></li><li><a href="AllClasses.html">Classes, Interfaces, Objects and Records</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constants</a></li><li><a href="AllFunctions.html">Functions and Procedures</a></li><li><a href="AllIdentifiers.html">Identifiers</a></li><li><form class="search-form" action="tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></div></form>
+<div style="clear: both"></div>
+</li></ul></div><div class="content">
+<p align="right"><a href="../ru/index.html">Русский</a> | <a  href="../en/index.html">English</a> </p>
+<span id="TCastleLine2D"></span><h1 class="cio">Class TCastleLine2D</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hierarchy</a></div><div class="one_section">Fields</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Methods</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Properties</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unit</h2>
+<p class="unitlink">
+<a href="CastleLine2D.html">CastleLine2D</a></p>
+<h2 class="declaration">Declaration</h2>
+<p class="declaration">
+<code>type TCastleLine2D = class(<a class="normal" href="CastleLine2DBase.TCastleLine2DBase.html">TCastleLine2DBase</a>)</code></p>
+<h2 class="description">Description</h2>
+<p>
+A polyline consists of rectangles. Has different connection methods for rectangles, various options for the beginning and end of the line. <br> To enter edit mode, use &quot;verb&quot; (Edit mode ON) - right-click on the object in the object hierarchy window.</p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hierarchy</h2>
+<ul class="hierarchy"><li class="ancestor">TCastleAbstractPrimitive</li>
+<li class="ancestor"><a class="normal" href="CastleLine2DBase.TCastleLine2DBase.html">TCastleLine2DBase</a></li>
+<li class="thisitem">TCastleLine2D</li></ul><h2 class="overview">Overview</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Methods</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code>procedure <strong><a href="CastleLine2D.TCastleLine2D.html#ChangedTransform">ChangedTransform</a></strong>; override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>constructor <strong><a href="CastleLine2D.TCastleLine2D.html#Create">Create</a></strong>(AOwner: TComponent); override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a href="CastleLine2D.TCastleLine2D.html#ReLoad">ReLoad</a></strong>; override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <strong><a href="CastleLine2D.TCastleLine2D.html#PropertySections">PropertySections</a></strong>(const PropertyName: String): TPropertySections; override;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Properties</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><code>property <strong><a href="CastleLine2D.TCastleLine2D.html#JoinMode">JoinMode</a></strong>: <a href="CastleLine2D.html#TJoinMode">TJoinMode</a> read FJoinMode write SetJoinMode default <a href="CastleLine2D.html#jmBevel">jmBevel</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><code>property <strong><a href="CastleLine2D.TCastleLine2D.html#JoinRoundPrecision">JoinRoundPrecision</a></strong>: integer read FJoinRoundPrecision write SetJoinRoundPrecision default 4;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><code>property <strong><a href="CastleLine2D.TCastleLine2D.html#JoinSharpLimitRad">JoinSharpLimitRad</a></strong>: single read FJoinSharpLimitRad write SetJoinSharpLimitRad default 0;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><code>property <strong><a href="CastleLine2D.TCastleLine2D.html#JoinBeginMode">JoinBeginMode</a></strong>: <a href="CastleLine2D.html#TBeginEndMode">TBeginEndMode</a> read FBeginMode write SetBeginMode default <a href="CastleLine2D.html#bmNone">bmNone</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><code>property <strong><a href="CastleLine2D.TCastleLine2D.html#JoinEndMode">JoinEndMode</a></strong>: <a href="CastleLine2D.html#TBeginEndMode">TBeginEndMode</a> read FEndMode write SetEndMode default <a href="CastleLine2D.html#bmNone">bmNone</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><code>property <strong><a href="CastleLine2D.TCastleLine2D.html#LineWidth">LineWidth</a></strong>: Single read FLineWidth write SetLineWidth default 10;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Methods</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><span id="ChangedTransform"></span><code>procedure <strong>ChangedTransform</strong>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>constructor <strong>Create</strong>(AOwner: TComponent); override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+When created in the CGE editor, creates a line of two points. When creating directly in the code (RunTime), points are not added.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ReLoad"></span><code>procedure <strong>ReLoad</strong>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="PropertySections"></span><code>function <strong>PropertySections</strong>(const PropertyName: String): TPropertySections; override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<h3 class="detail">Properties</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><span id="JoinMode"></span><code>property <strong>JoinMode</strong>: <a href="CastleLine2D.html#TJoinMode">TJoinMode</a> read FJoinMode write SetJoinMode default <a href="CastleLine2D.html#jmBevel">jmBevel</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Connection type for rectangles in a line</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><span id="JoinRoundPrecision"></span><code>property <strong>JoinRoundPrecision</strong>: integer read FJoinRoundPrecision write SetJoinRoundPrecision default 4;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The number of segments in the circle sector when JoinMode=jmRound</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><span id="JoinSharpLimitRad"></span><code>property <strong>JoinSharpLimitRad</strong>: single read FJoinSharpLimitRad write SetJoinSharpLimitRad default 0;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+With this or a smaller angle between the lines, an acute angle is not built. Used when JoinMode=jmSharp</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><span id="JoinBeginMode"></span><code>property <strong>JoinBeginMode</strong>: <a href="CastleLine2D.html#TBeginEndMode">TBeginEndMode</a> read FBeginMode write SetBeginMode default <a href="CastleLine2D.html#bmNone">bmNone</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The type of the beginning of the line</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><span id="JoinEndMode"></span><code>property <strong>JoinEndMode</strong>: <a href="CastleLine2D.html#TBeginEndMode">TBeginEndMode</a> read FEndMode write SetEndMode default <a href="CastleLine2D.html#bmNone">bmNone</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The type of the end of the line</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><span id="LineWidth"></span><code>property <strong>LineWidth</strong>: Single read FLineWidth write SetLineWidth default 10;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Line width</p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 0.16.0</a>. </em>
+</span>
+</div></div></body></html>

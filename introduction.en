@@ -1,0 +1,108 @@
+@bold(@url(https://github.com/KumurTash/CastleLines2D Castle Lines 2D )) is a set of two components for @bold(@url(https://castle-engine.io/ Castle Game Engine)).
+
+@bold(Castle Lines 2D) makes it possible to create geometry from polygons directly in the CGE editor.
+
+@bold(Castle Lines 2D) consists of classes inherited from TCastleAbstractPrimitive:
+
+@link(TCastleLine2D) - polyline.
+
+@link(TCastlePolygon2D) - potentially non-convex polygon.
+
+To enter the editing mode, use the drop-down menus in the object hierarchy window
+
+@bold(Left mouse button) - add a point, move a point.
+
+@bold(Right mouse button) - delete a point.
+
+@bold(Middle mouse button) - open a window for editing a point.
+
+@image(EditModeOn.gif)
+
+@html(
+<style type="text/css">
+code {
+    background-color: #f0f0f0;
+    font-family: monospace !important;
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #c7254e;
+    border-radius: 4px
+}
+
+pre {
+    white-space: pre-wrap;
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #333;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: auto;
+}
+ol {
+    display: block;
+    list-style-type: decimal;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    line-height: 1.5;
+}
+</style>
+
+
+<h2>Detailed usage instructions:</h2>
+<p>
+<ol>
+     <li>
+      Get <a href=https://github.com/KumurTash/CastleLines2D>CastleLine2D</a> code.
+     </li>
+     <li>
+      <p>
+      Point your project to <code>TCastleLine2D</code> sources.
+      E.g. add this to <code>CastleEngineManifest.xml:</code>
+      </p>
+      <pre>
+        &lt;compiler_options&gt;
+          &lt;search_paths&gt;
+            &lt;path value="code/" /&gt;
+            &lt;path value="../../../CastleLines2D/src/" /&gt;
+          &lt;/search_paths&gt;
+        &lt;/compiler_options&gt;
+      </pre>
+     </li>
+     <li> <p>
+       Add to <code>CastleEngineManifest.xml</code> the line <code>editor_units="CastleLine2D,CastlePolygon2D"</code>. </br>
+       See <a href=https://castle-engine.io/project_manifest>CastleEngineManifest.xml</a> docs for examples.
+     </p></li>
+     <li><p>
+      Open your project in CGE editor and use <i>“Project -> Restart Editor (With Custom Components)”</i>
+     </p></li>
+     <li><p>
+       In Lazarus don't forget to add the source path to <i>“Project Options -> Compiler Options -> Paths -> Other unit files”</i>
+     </p></li>
+     <li><p>
+       Be sure to also add <code>CastleLine2D, CastlePolygon2D </code> to some uses clause, to register components at runtime.
+     </p></li>
+
+</ol>
+</p>
+<h2>Examples</h2>
+<p>For examples, see <i>/CastleLines2D/examples</i> </p>
+)
+
+@image(preview1.png) @image(preview2.png) @image(preview3.png)
+
+
+
+

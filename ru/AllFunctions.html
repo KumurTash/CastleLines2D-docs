@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<title>Castle lines 2D: Все процедуры и функции</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.16.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2><a href="index.html">Castle lines 2D</a></h2><ul><li><a href="AllUnits.html">Модули</a></li><li><a href="ClassHierarchy.html">Иерархия классов</a></li><li><a href="AllClasses.html">Классы, интерфейсы и объекты</a></li><li><a href="AllTypes.html">Типы</a></li><li><a href="AllVariables.html">Переменные</a></li><li><a href="AllConstants.html">Константы</a></li><li><a href="AllFunctions.html">Процедуры и функции</a></li><li><a href="AllIdentifiers.html">Идентификаторы</a></li><li><form class="search-form" action="tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></div></form>
+<div style="clear: both"></div>
+</li></ul></div><div class="content">
+<p align="right"><a href="../ru/index.html">Русский</a> | <a  href="../en/index.html">English</a> </p>
+<h1 class="allitems">Все процедуры и функции</h1>
+<table class="itemstable wide_list">
+<tr class="listheader">
+<th class="itemname">Имя</th>
+<th class="itemunit">Модуль</th>
+<th class="itemdesc">Описание</th>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="CastleLine2DMath.html#AddArcBetweenPoints">AddArcBetweenPoints</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
+<td class="itemdesc"><p>Строит дугу между точками A,B c центром в точке Center <br> O - точка соединения сегментов (может совпадать с Center) <br> EdgesCount - количество сегментов <br> Полученные треугольники добавляются в Arc</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="CastleLine2DMath.html#AddCrossSegments">AddCrossSegments</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
+<td class="itemdesc"><p>Добавит треугольники для соединения двух отрезков в точке пересечения вне этих отрезков. A1:A2 первый отрезок. B1:B2 второй отрезок. O - точка соединения треугольников. <br> В результате построит треугольники (O,A2,cross) и (O,B2,cross).</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="CastleLine2DMath.html#AddHalfBox">AddHalfBox</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
+<td class="itemdesc"><p>Строит половину квадрат на отрезке А:B в направлении противоположном Opposite</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="CastleLine2DMath.html#AddHalfCircle">AddHalfCircle</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
+<td class="itemdesc"><p>Строит полукруг на отрезке А:B в направлении противоположном Opposite <br> EdgesCount - количество сегментов <br> Полученные треугольники добавляются в Arc</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="CastleLine2DMath.html#AddRect">AddRect</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
+<td class="itemdesc"><p>Строит прямоугольник осью симметрии которого является отрезок A:B. <br> Создает 0..5 точек 4 точка равна 0 точке. 5 точка равна 2 точке <br> 0 точка это A.Y-width/2, 1 это A.Y+width/2, .... <br> width - высота (или ширина) прямоугольника</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="CastleLine2DMath.html#AddTriangle">AddTriangle</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
+<td class="itemdesc"><p>Добавит треугольник в Arc</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="CastleLine2DMath.html#AddTriangleOpposite">AddTriangleOpposite</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
+<td class="itemdesc"><p>Строит прямоугольный равнобедренный треугольник на отрезке А:B в направлении противоположном Opposite</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="CastleLine2DMath.html#CrossingSegments">CrossingSegments</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
+<td class="itemdesc"><p>Пересечение отрезков A1:A2, B1:B2. <br> 1 Если есть точка пересечения &quot;CrossPoint&quot; <br> 0 если это параллельные линии <br> -1 если нет точек пересечения</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="CastleLine2DMath.html#DoFloat">DoFloat</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
+<td class="itemdesc"><p>Преобразует строку StringValue в число путем удаления лишнего. Remain это неудаляемый остаток в строке (можно использовать для того, чтобы '-' в начале строки не удалялся)</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="CastleLine2DMath.html#DoGoodTriangle">DoGoodTriangle</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
+<td class="itemdesc"><p>Сортирует вершины треугольника в порядок обхода по часовой стрелке в зависимости от Scale (во 2 и 4 четвертях порядок обхода меняется)</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="CastleLine2DMath.html#IsClockwiseTriangle">IsClockwiseTriangle</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
+<td class="itemdesc"><p>Если порядок обхода треугольника A,B,C по часовой стрелке, то вернет <code>True</code></p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="CastleLine2DMath.html#PSDistanceEx">PSDistanceEx</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
+<td class="itemdesc"><p>Минимальное расстояние от точки (P) до отрезка (SP1:SP2) с расчетом точки проекции (PP) на отрезок. <br> 0 - точка проецируется на отрезок: Distance = расст.от P до отрезка SP1,SP2. PP - проекция точки P на отрезок SP1,SP2 <br> 1 - точка P лежит &quot;левее&quot; SP1: Distance = расст.от P до SP1. PP=SP1 <br> 2 - точка P лежит &quot;правее&quot; SP2: Distance = расст.от P до SP2. PP=SP2</p></td>
+</tr>
+</table>
+<hr><span class="appinfo"><em>Сгенерировал <a href="https://pasdoc.github.io/">PasDoc 0.16.0</a>. </em>
+</span>
+</div></div></body></html>
