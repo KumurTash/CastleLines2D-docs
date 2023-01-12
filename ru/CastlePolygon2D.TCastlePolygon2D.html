@@ -45,23 +45,23 @@
 </tr>
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code>procedure <strong><a href="CastlePolygon2D.TCastlePolygon2D.html#ReLoadoverride">ReLoadoverride</a></strong>;</code></td>
+<td class="itemcode"><code>function <strong><a href="CastlePolygon2D.TCastlePolygon2D.html#CalculateAreaWithoutDisplay">CalculateAreaWithoutDisplay</a></strong>:single;</code></td>
 </tr>
 <tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a href="CastlePolygon2D.TCastlePolygon2D.html#ReLoadoverride">ReLoadoverride</a></strong>;</code></td>
+</tr>
+<tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
 <td class="itemcode"><code>constructor <strong><a href="CastlePolygon2D.TCastlePolygon2D.html#Create">Create</a></strong>(AOwner: TComponent); override;</code></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
 <td class="itemcode"><code>destructor <strong><a href="CastlePolygon2D.TCastlePolygon2D.html#Destroy">Destroy</a></strong>; override;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code>procedure <strong><a href="CastlePolygon2D.TCastlePolygon2D.html#Clear">Clear</a></strong>; override;</code></td>
-</tr>
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code>function <strong><a href="CastlePolygon2D.TCastlePolygon2D.html#SelfIntersections">SelfIntersections</a></strong>:boolean;</code></td>
+<td class="itemcode"><code>procedure <strong><a href="CastlePolygon2D.TCastlePolygon2D.html#Clear">Clear</a></strong>; override;</code></td>
 </tr>
 <tr class="list2">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
@@ -70,6 +70,22 @@
 </table>
 <span id="PasDoc-Properties"></span><h3 class="summary">Свойства</h3>
 <table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a href="CastlePolygon2D.TCastlePolygon2D.html#Area">Area</a></strong>: single read FArea;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a href="CastlePolygon2D.TCastlePolygon2D.html#TextureScale">TextureScale</a></strong>: TVector2 read FTextureScale write SetTextureScale;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><code>property <strong><a href="CastlePolygon2D.TCastlePolygon2D.html#TextureScalePersistent">TextureScalePersistent</a></strong>: TCastleVector2Persistent read FTextureScalePersistent;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><code>property <strong><a href="CastlePolygon2D.TCastlePolygon2D.html#TexCoordMode">TexCoordMode</a></strong>: <a href="CastlePolygon2D.html#TPolygonTexCoordMode">TPolygonTexCoordMode</a> read FTexCoordMode write SetTexCoordMode default <a href="CastlePolygon2D.html#cmDefault">cmDefault</a>;</code></td>
+</tr>
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
 <td class="itemcode"><code>property <strong><a href="CastlePolygon2D.TCastlePolygon2D.html#LineType">LineType</a></strong>;</code></td>
@@ -95,6 +111,16 @@
 <tr><td colspan="2">
 <p>
 Тип линии может быть только ltClose (замкнутая линия)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="CalculateAreaWithoutDisplay"></span><code>function <strong>CalculateAreaWithoutDisplay</strong>:single;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Вычислить площадь без отображения полигона</p>
 </td></tr>
 </table>
 <table class="detail wide_list">
@@ -134,22 +160,52 @@
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="SelfIntersections"></span><code>function <strong>SelfIntersections</strong>:boolean;</code></td>
-</tr>
-<tr><td colspan="2">
-<p>
-Проверка на самопересечение. При самопересечении многоугольник не отображается.</p>
-</td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
 <td class="itemcode"><span id="PropertySections"></span><code>function <strong>PropertySections</strong>(const PropertyName: String): TPropertySections; override;</code></td>
 </tr>
 <tr><td colspan="2">
 &nbsp;</td></tr>
 </table>
 <h3 class="detail">Свойства</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Area"></span><code>property <strong>Area</strong>: single read FArea;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Площадь многоугольника вычисляется в <code>CastlePolygon2D.Reload</code>. Если многоугольник отображать не требуется, то можно площадь можно вычеслить используя функцию <code>CastlePolygon2D.CalculateAreaWithoutDisplay</code>. Если обнаружено самопересечение, то площадь равна 0.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="TextureScale"></span><code>property <strong>TextureScale</strong>: TVector2 read FTextureScale write SetTextureScale;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Параметр влияет на увеличение текстуры при TexCoordMode=cmRepeat. Чем он меньше, тем текстура больше.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><span id="TextureScalePersistent"></span><code>property <strong>TextureScalePersistent</strong>: TCastleVector2Persistent read FTextureScalePersistent;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+<a class="normal" href="CastlePolygon2D.TCastlePolygon2D.html#TextureScale">TCastlePolygon2D.TextureScale</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><span id="TexCoordMode"></span><code>property <strong>TexCoordMode</strong>: <a href="CastlePolygon2D.html#TPolygonTexCoordMode">TPolygonTexCoordMode</a> read FTexCoordMode write SetTexCoordMode default <a href="CastlePolygon2D.html#cmDefault">cmDefault</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Метод вычисления текстурных координат</p>
+</td></tr>
+</table>
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>

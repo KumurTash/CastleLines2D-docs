@@ -101,7 +101,68 @@ li {
 <p>Примеры использования компонентов смотрите в <i>/CastleLines2D/examples</i> </p>
 )
 
-@image(preview1.png) @image(preview2.png) @image(preview3.png)
+@image(preview1.png) @image(preview2.png) @image(preview3.png) @image(preview4.png)
+
+@html(<h2>Журнал изменений</h2><p><a name="change"></a></p>)
+
+@bold(12.01.2023):
+
+Добавлены различные способы наложения текстуры на @Link(TCastleLine2D), @Link(TCastlePolygon2D).
+
+Клавиша Shift теперь помогает рисовать ровные линии.
+
+В @Link(CastlePolygon2D) добавлено свойство @Link(TCastlePolygon2D.Area) - площадь многоугольника
+
+Исправлены баги.
+
+@html(<h3>Подробнее</h3>)
+
+@bold(@Link(TCastleLine2D)) @br
+В качестве геометрии теперь используется объект типа @bold(TIndexedTriangleSetNode)
+
+Изменен тип @Link(CastleLine2D.TBeginEndMode) @br
+Добавлен тип @Link(CastleLine2D.TLineTexCoordMode) @br
+Добавлен тип @Link(CastleLine2D.TJoinTexCoordMode) @br
+Добавлено свойство @Link(TCastleLine2D.TexCoordMode) @br
+Добавлено свойство @Link(TCastleLine2D.JoinTexCoordMode) @br
+
+В раздел @bold(protected) добавлено @br
+Переменные @Link(TCastleLine2D.FTexY), @Link(TCastleLine2D.FTexX) @br
+Метод @Link(TCastleLine2D.AddGeometryBeginEnd) @br
+Метод @Link(TCastleLine2D.SetTexCoordMode)
+
+@bold(@Link(TCastlePolygon2D)) @br
+В качестве геометрии теперь используется объект типа @bold(TIndexedTriangleSetNode)
+
+Добавлен тип @Link(CastlePolygon2D.TPolygonTexCoordMode) @br
+Добавлено свойство @Link(TCastlePolygon2D.Area) @br
+Добавлено свойство @Link(TCastlePolygon2D.TextureScale) @br
+Добавлено свойство @Link(TCastlePolygon2D.TexCoordMode) @br
+Добавлен метод @Link(TCastlePolygon2D.CalculateAreaWithoutDisplay) @br
+@Link(TCastleLine2DBase.SelfIntersections) перенесен в @Link(TCastleLine2DBase)
+
+@bold(@Link(CastleLine2DMath)) @br
+Добавлено   @Link(CastleLine2DMath.AddBox) @br
+Добавлено   @Link(CastleLine2DMath.AddTriangleTop) @br
+Добавлено   @Link(CastleLine2DMath.AddRoundBoxTop) @br
+
+@Link(CastleLine2DMath.DoGoodTriangle) теперь функция @br
+@Link(CastleLine2DMath.AddArcBetweenPoints) теперь функция @br
+@Link(CastleLine2DMath.AddCrossSegments) теперь функция @br
+@Link(CastleLine2DMath.AddRect) - изменен порядок обхода прямоугольника
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

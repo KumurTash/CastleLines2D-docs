@@ -43,23 +43,23 @@ A potentially non-convex polygon. It is constructed from a set of vertices using
 </tr>
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code>procedure <strong><a href="CastlePolygon2D.TCastlePolygon2D.html#ReLoadoverride">ReLoadoverride</a></strong>;</code></td>
+<td class="itemcode"><code>function <strong><a href="CastlePolygon2D.TCastlePolygon2D.html#CalculateAreaWithoutDisplay">CalculateAreaWithoutDisplay</a></strong>:single;</code></td>
 </tr>
 <tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a href="CastlePolygon2D.TCastlePolygon2D.html#ReLoadoverride">ReLoadoverride</a></strong>;</code></td>
+</tr>
+<tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
 <td class="itemcode"><code>constructor <strong><a href="CastlePolygon2D.TCastlePolygon2D.html#Create">Create</a></strong>(AOwner: TComponent); override;</code></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
 <td class="itemcode"><code>destructor <strong><a href="CastlePolygon2D.TCastlePolygon2D.html#Destroy">Destroy</a></strong>; override;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code>procedure <strong><a href="CastlePolygon2D.TCastlePolygon2D.html#Clear">Clear</a></strong>; override;</code></td>
-</tr>
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code>function <strong><a href="CastlePolygon2D.TCastlePolygon2D.html#SelfIntersections">SelfIntersections</a></strong>:boolean;</code></td>
+<td class="itemcode"><code>procedure <strong><a href="CastlePolygon2D.TCastlePolygon2D.html#Clear">Clear</a></strong>; override;</code></td>
 </tr>
 <tr class="list2">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
@@ -68,6 +68,22 @@ A potentially non-convex polygon. It is constructed from a set of vertices using
 </table>
 <span id="PasDoc-Properties"></span><h3 class="summary">Properties</h3>
 <table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a href="CastlePolygon2D.TCastlePolygon2D.html#Area">Area</a></strong>: single read FArea;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a href="CastlePolygon2D.TCastlePolygon2D.html#TextureScale">TextureScale</a></strong>: TVector2 read FTextureScale write SetTextureScale;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><code>property <strong><a href="CastlePolygon2D.TCastlePolygon2D.html#TextureScalePersistent">TextureScalePersistent</a></strong>: TCastleVector2Persistent read FTextureScalePersistent;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><code>property <strong><a href="CastlePolygon2D.TCastlePolygon2D.html#TexCoordMode">TexCoordMode</a></strong>: <a href="CastlePolygon2D.html#TPolygonTexCoordMode">TPolygonTexCoordMode</a> read FTexCoordMode write SetTexCoordMode default <a href="CastlePolygon2D.html#cmDefault">cmDefault</a>;</code></td>
+</tr>
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
 <td class="itemcode"><code>property <strong><a href="CastlePolygon2D.TCastlePolygon2D.html#LineType">LineType</a></strong>;</code></td>
@@ -92,6 +108,14 @@ A potentially non-convex polygon. It is constructed from a set of vertices using
 <p>
 The line type is always ltClose</p>
 </td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="CalculateAreaWithoutDisplay"></span><code>function <strong>CalculateAreaWithoutDisplay</strong>:single;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
@@ -128,22 +152,52 @@ The line type is always ltClose</p>
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="SelfIntersections"></span><code>function <strong>SelfIntersections</strong>:boolean;</code></td>
-</tr>
-<tr><td colspan="2">
-<p>
-Checking for self-intersection. When self-intersecting, the polygon is not displayed.</p>
-</td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
 <td class="itemcode"><span id="PropertySections"></span><code>function <strong>PropertySections</strong>(const PropertyName: String): TPropertySections; override;</code></td>
 </tr>
 <tr><td colspan="2">
 &nbsp;</td></tr>
 </table>
 <h3 class="detail">Properties</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Area"></span><code>property <strong>Area</strong>: single read FArea;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The area of the polygon is calculated in <code>CastlePolygon2D.Reload</code>. If the polygon does not need to be displayed, then the area can be calculated using the UNKNOWN If self-intersection is detected, then the area is 0.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="TextureScale"></span><code>property <strong>TextureScale</strong>: TVector2 read FTextureScale write SetTextureScale;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The parameter affects the texture magnification when TexCoordMode=cm Repeat. The smaller it is, the bigger the texture.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><span id="TextureScalePersistent"></span><code>property <strong>TextureScalePersistent</strong>: TCastleVector2Persistent read FTextureScalePersistent;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+<a class="normal" href="CastlePolygon2D.TCastlePolygon2D.html#TextureScale">TCastlePolygon2D.TextureScale</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><span id="TexCoordMode"></span><code>property <strong>TexCoordMode</strong>: <a href="CastlePolygon2D.html#TPolygonTexCoordMode">TPolygonTexCoordMode</a> read FTexCoordMode write SetTexCoordMode default <a href="CastlePolygon2D.html#cmDefault">cmDefault</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Method for calculating texture coordinates</p>
+</td></tr>
+</table>
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>

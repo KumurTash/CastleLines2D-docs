@@ -66,6 +66,8 @@ Is editing mode enabled
 Line type (open line, closed line)
 #CastleLine2DBase.TCastleLine2DBase.Points
 Points (vertices). Inherited classes should build geometry based on them
+#CastleLine2DBase.TCastleLine2DBase.SelfIntersections
+Checking for self-intersection.
 
 #CastleLine2D
 TCastleLine2D
@@ -81,10 +83,35 @@ Sharp edges
 The type of the beginning and end of the line
 #CastleLine2D.TBeginEndMode.bmRound
 Semicircle
+#CastleLine2D.TBeginEndMode.bmTopRound
+Rounded square on top
+#CastleLine2D.TBeginEndMode.bmBottomRound
+Rounded square on bottom
 #CastleLine2D.TBeginEndMode.bmTriangle
 Triangle
+#CastleLine2D.TBeginEndMode.bmTopTriangle
+Triangle with hypotenuse on top
+#CastleLine2D.TBeginEndMode.bmBottomTriangle
+Triangle with hypotenuse on bottom
 #CastleLine2D.TBeginEndMode.bmBox
+Square
+#CastleLine2D.TBeginEndMode.bmHalfBox
 Half a square
+#CastleLine2D.TLineTexCoordMode
+Type for determining how texture coordinates are calculated.
+#CastleLine2D.TLineTexCoordMode.cmDefault
+Texture coordinates are considered CGE methods
+#CastleLine2D.TLineTexCoordMode.cmLine
+Entire height of the texture is used
+#CastleLine2D.TLineTexCoordMode.cmBeginEndLine
+Allows you to use different areas of the texture for the beginning and the end.
+Read more @link(TCastleLine2D.TexCoordMode)
+#CastleLine2D.TJoinTexCoordMode
+The method of applying texture to the bends of a line
+#CastleLine2D.TJoinTexCoordMode.jcmStretch
+Stretch texture
+#CastleLine2D.TJoinTexCoordMode.jcmCrop
+Crop texture
 #CastleLine2D.TCastleLine2D
 A polyline consists of rectangles.
 Has different connection methods for rectangles,
@@ -106,9 +133,40 @@ The type of the beginning of the line
 The type of the end of the line
 #CastleLine2D.TCastleLine2D.LineWidth
 Line width
+#CastleLine2D.TCastleLine2D.TexCoordMode
+Method for calculating texture coordinates. @br
+With @bold(cmDefault), texture coordinates are set by CGE methods. @br
+With @bold(cmLine) the line repeats the texture as it lengthens. The texture can be any. @br
+With @bold(cmBeginEndLine), different areas of the texture are used for the beginning and end.
+The texture must be specially prepared. @br
+Examples of textures for @bold(cmBeginEndLine):
+@image(../img/BeginEndLine1.png) or @image(../img/BeginEndLine2.png) or @image(../img/BeginEndLine3.png)
+#CastleLine2D.TCastleLine2D.JoinTexCoordMode
+The method for calculating texture coordinates on line bends. When JoinMode=jmSharp is not used.
+#CastleLine2D.TCastleLine2D.FTexY
+Coefficient for correct texture mapping.
+Determines which part of the texture along the Y axis should be used.
+When TexCoordMode=cmLine is 1. When TexCoordMode=cmBeginEndLine is 0.5
+#CastleLine2D.TCastleLine2D.FTexX
+X-axis coefficient for correct texture mapping.
+Usually equal to (Texture height)/(Line width*Texture width)
+#CastleLine2D.TCastleLine2D.AddGeometryBeginEnd
+Add the geometry of the beginning and end of the line. A,B - the segment where the geometry is attached. @br
+Opposite - the geometry will be built in the opposite direction from this point. @br
+GList - you need to add geometry here. @br
+BeginOrEnd - pointer to @link(TCastleLine2D.JoinBeginMode) or to @link(TCastleLine2D.JoinEndMode). @br
+Inherited classes should override the method if a new geometry needs to be added.
+#CastleLine2D.TCastleLine2D.SetTexCoordMode
+Sets the @link(TCastleLine2D.TexCoordMode) and @link(TCastleLine2D.FTexY) and @link(TCastleLine2D.FTexX).
 
 #CastlePolygon2D
 TCastlePolygon2D
+#CastlePolygon2D.TPolygonTexCoordMode
+Type for determining how texture coordinates are calculated.
+#CastlePolygon2D.TPolygonTexCoordMode.cmDefault
+Texture coordinates are considered CGE methods
+#CastlePolygon2D.TPolygonTexCoordMode.cmRepeat
+Repeating texture
 #CastlePolygon2D.TCastlePolygon2D
 A potentially non-convex polygon.
 It is constructed from a set of vertices using the triangulation method. @br
@@ -119,9 +177,18 @@ The line type is always ltClose
 #CastlePolygon2D.TCastlePolygon2D.ReLoad
 When creating in the CGE editor, points forming a star are added.
 When creating directly in the code (RunTime), points are not added.
-#CastlePolygon2D.TCastlePolygon2D.SelfIntersections
-Checking for self-intersection.
-When self-intersecting, the polygon is not displayed.
+#CastlePolygon2D.TCastlePolygon2D.Area
+The area of the polygon is calculated in @Link(CastlePolygon2D.Reload).
+If the polygon does not need to be displayed, then the area can be calculated
+using the @Link function(CastlePolygon2D.CalculateAreaWithoutDisplay).
+If self-intersection is detected, then the area is 0.
+#CastlePolygon2D.TCastlePolygon2D.TextureScale
+The parameter affects the texture magnification when TexCoordMode=cm Repeat.
+The smaller it is, the bigger the texture.
+#CastlePolygon2D.TCastlePolygon2D.TextureScalePersistent
+@Link(TCastlePolygon2D.TextureScale)
+#CastlePolygon2D.TCastlePolygon2D.TexCoordMode
+Method for calculating texture coordinates
 
 #CastleLine2DGizmos
 TCastleLine2DGizmos, Line2DGizmos
@@ -180,7 +247,8 @@ If the order of traversal of triangle A,B,C is clockwise, then returns @true
 Builds an arc between points A,B with the center at the point Center @br
 O - the point of connection of the segments (may coincide with the Center) @br
 EdgesCount - number of segments @br
-The resulting triangles are added to Arc
+The resulting triangles are added to Arc @br
+Result = arc length
 #CastleLine2DMath.AddHalfCircle
 Builds a semicircle on the segment A:B in the opposite direction Opposite @br
 EdgesCount - number of segments @br
@@ -188,20 +256,36 @@ The resulting triangles are added to Arc
 #CastleLine2DMath.AddTriangle
 Adds a triangle to the Arc
 #CastleLine2DMath.AddTriangleOpposite
-Builds a rectangular isosceles triangle on the segment A:B in the opposite direction Opposite
+Builds a rectangular isosceles triangle on the segment A:B in the opposite direction Opposite.
+Hypotenuse - A:B
 #CastleLine2DMath.AddHalfBox
 Builds a half square on the segment A:B in the opposite direction Opposite
 #CastleLine2DMath.AddRect
 Builds a rectangle whose axis of symmetry is the segment A:B. @br
 Creates 0..5 points 4 point equals 0 point. 5 point equals 2 point @br
-0 point = A.Y-width/2, 1 point = A.Y+width/2,  ....  @br
-width - height (or width) of the rectangle
+If A.X<B.X, the zero point is the lower left @br
+If A.X>B.X, the zero point is the upper right @br
+If A.X=B.X and A.Y<B.Y the zero point is the lower right @br
+If A.X=B.X and A.Y>B.Y, the zero point is the upper left @br
+Traversing the rectangle clockwise @br
+width - height of the rectangle
 #CastleLine2DMath.AddCrossSegments
 Adds triangles to connect two segments at the intersection point outside of these segments.
 A1:A2 the first segment.
 B1:B2 is the second segment.
 O is the junction point of the triangles. @br
-As a result, construct triangles (O,A2,cross) and (O,B2,cross).
+As a result, construct triangles (O,A2,cross) and (O,B2,cross). @br
+Result = length of the constructed segments
 #CastleLine2DMath.DoGoodTriangle
 Sorts the vertices of the triangle in clockwise traversal order
-depending on the "Scale" (in the 2nd and 4th quarters, the order of traversal changes)
+depending on the "Scale" (in the 2nd and 4th quarters, the order of traversal changes).
+If changes have been made (B and C have been swapped), it will return true.
+#CastleLine2DMath.AddBox
+Builds a square on the segment A:B in the opposite direction of the Opposite.
+#CastleLine2DMath.AddTriangleTop
+Builds a rectangular isosceles triangle on the segment A:B in the direction opposite to the Opposite.
+Hypotenuse - A:New Point
+#CastleLine2DMath.AddRoundBoxTop
+Builds a square with one corner rounded on the segment A:B in the direction opposite to the Opposite.
+EdgesCount - the number of arc segments.
+Result = arc length.

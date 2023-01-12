@@ -36,14 +36,41 @@ TCastleLine2D</p>
 <span id="PasDoc-Types"></span><h3 class="summary">Типы</h3>
 <table class="summary wide_list">
 <tr class="list">
-<td class="itemcode"><code><strong><a href="CastleLine2D.html#TJoinMode">TJoinMode</a></strong> = (...);</code></td>
+<td class="itemcode"><code><strong><a href="CastleLine2D.html#TLineTexCoordMode">TLineTexCoordMode</a></strong> = (...);</code></td>
 </tr>
 <tr class="list2">
+<td class="itemcode"><code><strong><a href="CastleLine2D.html#TJoinMode">TJoinMode</a></strong> = (...);</code></td>
+</tr>
+<tr class="list">
 <td class="itemcode"><code><strong><a href="CastleLine2D.html#TBeginEndMode">TBeginEndMode</a></strong> = (...);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="CastleLine2D.html#PBeginEndMode">PBeginEndMode</a></strong>=&circ;<a href="CastleLine2D.html#TBeginEndMode">TBeginEndMode</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="CastleLine2D.html#TJoinTexCoordMode">TJoinTexCoordMode</a></strong> = (...);</code></td>
 </tr>
 </table>
 <h2 class="description">Описание</h2>
 <h3 class="detail">Типы</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TLineTexCoordMode"></span><code><strong>TLineTexCoordMode</strong> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Тип для определения способа вычесления текстурных координат</p>
+<h6 class="description_section">Значение</h6>
+<ul>
+<li>
+<span id="cmDefault">cmDefault</span>: Тексурными координаты считаются методами CGE.</li>
+<li>
+<span id="cmLine">cmLine</span>: Используется вся высота текстуры для наложения на линию.</li>
+<li>
+<span id="cmBeginEndLine">cmBeginEndLine</span>: Позволяет использовать разные области текстуры для начала и конца. Подробнее <a class="normal" href="CastleLine2D.TCastleLine2D.html#TexCoordMode">TCastleLine2D.TexCoordMode</a></li>
+</ul>
+</td></tr>
+</table>
 <table class="detail wide_list">
 <tr class="list">
 <td class="itemcode"><span id="TJoinMode"></span><code><strong>TJoinMode</strong> = (...);</code></td>
@@ -76,9 +103,42 @@ TCastleLine2D</p>
 <li>
 <span id="bmRound">bmRound</span>: Полукруг</li>
 <li>
+<span id="bmTopRound">bmTopRound</span>: Скругленный квадрат сверху</li>
+<li>
+<span id="bmBottomRound">bmBottomRound</span>: Скругленный квадрат снизу</li>
+<li>
 <span id="bmTriangle">bmTriangle</span>: Треугольник</li>
 <li>
-<span id="bmBox">bmBox</span>: Половина квадрата</li>
+<span id="bmTopTriangle">bmTopTriangle</span>: Треугольник с гипотенузой вверху</li>
+<li>
+<span id="bmBottomTriangle">bmBottomTriangle</span>: Треугольник с гипотенузой внизу</li>
+<li>
+<span id="bmHalfBox">bmHalfBox</span>: Половина квадрата</li>
+<li>
+<span id="bmBox">bmBox</span>: Квадрат</li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="PBeginEndMode"></span><code><strong>PBeginEndMode</strong>=&circ;<a href="CastleLine2D.html#TBeginEndMode">TBeginEndMode</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TJoinTexCoordMode"></span><code><strong>TJoinTexCoordMode</strong> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Способ наложения текстуры на изгибы линии</p>
+<h6 class="description_section">Значение</h6>
+<ul>
+<li>
+<span id="jcmStretch">jcmStretch</span>: растянуть текстуру</li>
+<li>
+<span id="jcmCrop">jcmCrop</span>: обрезать текстуру</li>
 </ul>
 </td></tr>
 </table>

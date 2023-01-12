@@ -101,7 +101,55 @@ li {
 <p>For examples, see <i>/CastleLines2D/examples</i> </p>
 )
 
-@image(preview1.png) @image(preview2.png) @image(preview3.png)
+@image(preview1.png) @image(preview2.png) @image(preview3.png) @image(preview4.png)
+
+@html(<h2>Change log</h2><p><a name="change"></a></p>)
+
+@bold(12.01.2023):
+
+Added various ways to apply texture to @Link(TCastleLine2D), @Link(TCastlePolygon2D).
+
+The Shift key now helps to draw straight lines.
+
+In @Link(CastlePolygon2D) added property @Link(TCastlePolygon2D.Area)
+
+Bugs fixed.
+
+@html(<h3>More details</h3>)
+
+@bold(@Link(TCastleLine2D)) @br
+An object of type @bold(TIndexedTriangleSetNode) is now used as geometry
+
+Changed type @Link(CastleLine2D.TBeginEndMode) @br
+Added type @Link(CastleLine2D.TLineTexCoordMode) @br
+Added type @Link(CastleLine2D.TJoinTexCoordMode) @br
+Added property @Link(TCastleLine2D.TexCoordMode) @br
+Added property @Link(TCastleLine2D.JoinTexCoordMode) @br
+
+To the section @bold(protected) added @br
+Variables @Link(TCastleLine2D.FTexY), @Link(TCastleLine2D.FTexX) @br
+Method @Link(TCastleLine2D.AddGeometryBeginEnd) @br
+Method @Link(TCastleLine2D.SetTexCoordMode)
+
+@bold(@Link(TCastlePolygon2D)) @br
+An object of type @bold(TIndexedTriangleSetNode) is now used as geometry
+
+Added type @Link(CastlePolygon2D.TPolygonTexCoordMode) @br
+Added property @Link(TCastlePolygon2D.Area) @br
+Added property @Link(TCastlePolygon2D.TextureScale) @br
+Added property @Link(TCastlePolygon2D.TexCoordMode) @br
+Added method @Link(TCastlePolygon2D.CalculateAreaWithoutDisplay) @br
+@Link(TCastleLine2DBase.SelfIntersections) moved to @Link(TCastleLine2DBase)
+
+@bold(@Link(CastleLine2DMath)) @br
+Added   @Link(CastleLine2DMath.AddBox) @br
+Added   @Link(CastleLine2DMath.AddTriangleTop) @br
+Added   @Link(CastleLine2DMath.AddRoundBoxTop) @br
+
+@Link(CastleLine2DMath.DoGoodTriangle) is now a function @br
+@Link(CastleLine2DMath.AddArcBetweenPoints) is now a function @br
+@Link(CastleLine2DMath.AddCrossSegments) is now a function @br
+@Link(CastleLine2DMath.AddRect) - the order of traversing the rectangle has been changed
 
 
 

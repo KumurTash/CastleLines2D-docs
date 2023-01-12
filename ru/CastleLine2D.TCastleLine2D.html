@@ -17,7 +17,7 @@
 <p align="right"><a href="../ru/index.html">Русский</a> | <a  href="../en/index.html">English</a> </p>
 <span id="TCastleLine2D"></span><h1 class="cio">Класс TCastleLine2D</h1>
 <div class="sections">
-<div class="one_section"><a class="section" href="#PasDoc-Description">Описание</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Иерархия</a></div><div class="one_section">Поля</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Методы</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Свойства</a></div></div>
+<div class="one_section"><a class="section" href="#PasDoc-Description">Описание</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Иерархия</a></div><div class="one_section"><a class="section" href="#PasDoc-Fields">Поля</a></div><div class="one_section"><a class="section" href="#PasDoc-Methods">Методы</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Свойства</a></div></div>
 <span id="PasDoc-Description"></span><h2 class="unit">Модуль</h2>
 <p class="unitlink">
 <a href="CastleLine2D.html">CastleLine2D</a></p>
@@ -33,6 +33,17 @@
 <ul class="hierarchy"><li class="ancestor">TCastleAbstractPrimitive</li>
 <li class="ancestor"><a class="normal" href="CastleLine2DBase.TCastleLine2DBase.html">TCastleLine2DBase</a></li>
 <li class="thisitem">TCastleLine2D</li></ul><h2 class="overview">Обзор</h2>
+<span id="PasDoc-Fields"></span><h3 class="summary">Поля</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code><strong><a href="CastleLine2D.TCastleLine2D.html#FTexY">FTexY</a></strong>:single;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code><strong><a href="CastleLine2D.TCastleLine2D.html#FTexX">FTexX</a></strong>:single;</code></td>
+</tr>
+</table>
 <span id="PasDoc-Methods"></span><h3 class="summary">Методы</h3>
 <table class="summary wide_list">
 <tr class="list">
@@ -40,14 +51,26 @@
 <td class="itemcode"><code>procedure <strong><a href="CastleLine2D.TCastleLine2D.html#ChangedTransform">ChangedTransform</a></strong>; override;</code></td>
 </tr>
 <tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code>procedure <strong><a href="CastleLine2D.TCastleLine2D.html#AddGeometryBeginEnd">AddGeometryBeginEnd</a></strong>(const BeginOrEnd:<a href="CastleLine2D.html#PBeginEndMode">PBeginEndMode</a>; var GList:TVector2List; const A,B,Opposite:TVector2); virtual;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code>procedure <strong><a href="CastleLine2D.TCastleLine2D.html#SetTexCoordMode">SetTexCoordMode</a></strong>(cm:<a href="CastleLine2D.html#TLineTexCoordMode">TLineTexCoordMode</a>);</code></td>
+</tr>
+<tr class="list2">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
 <td class="itemcode"><code>constructor <strong><a href="CastleLine2D.TCastleLine2D.html#Create">Create</a></strong>(AOwner: TComponent); override;</code></td>
 </tr>
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code>procedure <strong><a href="CastleLine2D.TCastleLine2D.html#ReLoad">ReLoad</a></strong>; override;</code></td>
+<td class="itemcode"><code>destructor <strong><a href="CastleLine2D.TCastleLine2D.html#Destroy">Destroy</a></strong>; override;</code></td>
 </tr>
 <tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a href="CastleLine2D.TCastleLine2D.html#ReLoad">ReLoad</a></strong>; override;</code></td>
+</tr>
+<tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
 <td class="itemcode"><code>function <strong><a href="CastleLine2D.TCastleLine2D.html#PropertySections">PropertySections</a></strong>(const PropertyName: String): TPropertySections; override;</code></td>
 </tr>
@@ -78,8 +101,37 @@
 <td class="visibility"><a href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
 <td class="itemcode"><code>property <strong><a href="CastleLine2D.TCastleLine2D.html#LineWidth">LineWidth</a></strong>: Single read FLineWidth write SetLineWidth default 10;</code></td>
 </tr>
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><code>property <strong><a href="CastleLine2D.TCastleLine2D.html#TexCoordMode">TexCoordMode</a></strong>: <a href="CastleLine2D.html#TLineTexCoordMode">TLineTexCoordMode</a> read FTexCoordMode write <a href="CastleLine2D.TCastleLine2D.html#SetTexCoordMode">SetTexCoordMode</a> default <a href="CastleLine2D.html#cmDefault">cmDefault</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><code>property <strong><a href="CastleLine2D.TCastleLine2D.html#JoinTexCoordMode">JoinTexCoordMode</a></strong>: <a href="CastleLine2D.html#TJoinTexCoordMode">TJoinTexCoordMode</a> read FJoinTexCoordMode write FJoinTexCoordMode default <a href="CastleLine2D.html#jcmCrop">jcmCrop</a>;</code></td>
+</tr>
 </table>
 <h2 class="description">Описание</h2>
+<h3 class="detail">Поля</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><span id="FTexY"></span><code><strong>FTexY</strong>:single;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Коэффициент для правильного наложения текстуры. Определяет какую часть текстуры по оси Y необходимо использовать. При TexCoordMode=cmLine равен 1, при TexCoordMode=cmBeginEndLine равен 0.5</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><span id="FTexX"></span><code><strong>FTexX</strong>:single;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Коэффициент оси X для правильного наложения текстуры. Обычно равен (Высота текстуры)/(Ширина линии*Ширина текстуры)</p>
+</td></tr>
+</table>
 <h3 class="detail">Методы</h3>
 <table class="detail wide_list">
 <tr class="list">
@@ -91,6 +143,26 @@
 </table>
 <table class="detail wide_list">
 <tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><span id="AddGeometryBeginEnd"></span><code>procedure <strong>AddGeometryBeginEnd</strong>(const BeginOrEnd:<a href="CastleLine2D.html#PBeginEndMode">PBeginEndMode</a>; var GList:TVector2List; const A,B,Opposite:TVector2); virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Добавить геометрию начала и конца линии. A,B - отрезок, куда прикрепляется геометрия. <br> Opposite - в противоположном направлении от этой точки будет строиться геометрия. <br> GList - сюда необходимо добавлять геометрию. <br> BeginOrEnd - указатель на <a class="normal" href="CastleLine2D.TCastleLine2D.html#JoinBeginMode">TCastleLine2D.JoinBeginMode</a> или на <a class="normal" href="CastleLine2D.TCastleLine2D.html#JoinEndMode">TCastleLine2D.JoinEndMode</a>. <br> Потомки должны переопределить метод, если требуется добавить новую геометрию.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><span id="SetTexCoordMode"></span><code>procedure <strong>SetTexCoordMode</strong>(cm:<a href="CastleLine2D.html#TLineTexCoordMode">TLineTexCoordMode</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Устанавливает <a class="normal" href="CastleLine2D.TCastleLine2D.html#TexCoordMode">TCastleLine2D.TexCoordMode</a> и <a class="normal" href="CastleLine2D.TCastleLine2D.html#FTexY">TCastleLine2D.FTexY</a> и <a class="normal" href="CastleLine2D.TCastleLine2D.html#FTexX">TCastleLine2D.FTexX</a>.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
 <td class="itemcode"><span id="Create"></span><code>constructor <strong>Create</strong>(AOwner: TComponent); override;</code></td>
 </tr>
@@ -98,6 +170,14 @@
 <p>
 При создании в редакторе CGE создает линию из двух точек. При создании непосредственно в коде (RunTime) точки не добавляются.</p>
 </td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Destroy"></span><code>destructor <strong>Destroy</strong>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
@@ -174,6 +254,26 @@
 <tr><td colspan="2">
 <p>
 Ширина линии</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><span id="TexCoordMode"></span><code>property <strong>TexCoordMode</strong>: <a href="CastleLine2D.html#TLineTexCoordMode">TLineTexCoordMode</a> read FTexCoordMode write <a href="CastleLine2D.TCastleLine2D.html#SetTexCoordMode">SetTexCoordMode</a> default <a href="CastleLine2D.html#cmDefault">cmDefault</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Метод вычисления текстурных координат. <br> При <strong>cmDefault</strong> текстурные координаты устанавливаются методами CGE. <br> При <strong>cmLine</strong> линия повторяет текcтуру по мере удлинения. Текстура может быть любая. <br> При <strong>cmBeginEndLine</strong> используются разные области текстуры для начала и конца. Текстура должна быть специално подготовлена. <br> Примеры текстур для <strong>cmBeginEndLine</strong>: <img src="image_5.png" alt="BeginEndLine1" /> или <img src="image_6.png" alt="BeginEndLine2" /> или <img src="image_7.png" alt="BeginEndLine3" /></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><span id="JoinTexCoordMode"></span><code>property <strong>JoinTexCoordMode</strong>: <a href="CastleLine2D.html#TJoinTexCoordMode">TJoinTexCoordMode</a> read FJoinTexCoordMode write FJoinTexCoordMode default <a href="CastleLine2D.html#jcmCrop">jcmCrop</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Способ вычисления текстурных координат на изгибы линии. При JoinMode=jmSharp не используется</p>
 </td></tr>
 </table>
 <hr><span class="appinfo"><em>Сгенерировал <a href="https://pasdoc.github.io/">PasDoc 0.16.0</a>. </em>

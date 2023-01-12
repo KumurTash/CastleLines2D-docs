@@ -25,27 +25,37 @@
 <tr class="list">
 <td class="itemname"><a class="bold" href="CastleLine2DMath.html#AddArcBetweenPoints">AddArcBetweenPoints</a></td>
 <td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
-<td class="itemdesc"><p>Builds an arc between points A,B with the center at the point Center <br> O - the point of connection of the segments (may coincide with the Center) <br> EdgesCount - number of segments <br> The resulting triangles are added to Arc</p></td>
+<td class="itemdesc"><p>Builds an arc between points A,B with the center at the point Center <br> O - the point of connection of the segments (may coincide with the Center) <br> EdgesCount - number of segments <br> The resulting triangles are added to Arc <br> Result = arc length</p></td>
 </tr>
 <tr class="list2">
-<td class="itemname"><a class="bold" href="CastleLine2DMath.html#AddCrossSegments">AddCrossSegments</a></td>
+<td class="itemname"><a class="bold" href="CastleLine2DMath.html#AddBox">AddBox</a></td>
 <td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
-<td class="itemdesc"><p>Adds triangles to connect two segments at the intersection point outside of these segments. A1:A2 the first segment. B1:B2 is the second segment. O is the junction point of the triangles. <br> As a result, construct triangles (O,A2,cross) and (O,B2,cross).</p></td>
+<td class="itemdesc"><p>Builds a square on the segment A:B in the opposite direction of the Opposite.</p></td>
 </tr>
 <tr class="list">
+<td class="itemname"><a class="bold" href="CastleLine2DMath.html#AddCrossSegments">AddCrossSegments</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
+<td class="itemdesc"><p>Adds triangles to connect two segments at the intersection point outside of these segments. A1:A2 the first segment. B1:B2 is the second segment. O is the junction point of the triangles. <br> As a result, construct triangles (O,A2,cross) and (O,B2,cross). <br> Result = length of the constructed segments</p></td>
+</tr>
+<tr class="list2">
 <td class="itemname"><a class="bold" href="CastleLine2DMath.html#AddHalfBox">AddHalfBox</a></td>
 <td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
 <td class="itemdesc"><p>Builds a half square on the segment A:B in the opposite direction Opposite</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="CastleLine2DMath.html#AddHalfCircle">AddHalfCircle</a></td>
 <td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
 <td class="itemdesc"><p>Builds a semicircle on the segment A:B in the opposite direction Opposite <br> EdgesCount - number of segments <br> The resulting triangles are added to Arc</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="CastleLine2DMath.html#AddRect">AddRect</a></td>
 <td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
-<td class="itemdesc"><p>Builds a rectangle whose axis of symmetry is the segment A:B. <br> Creates 0..5 points 4 point equals 0 point. 5 point equals 2 point <br> 0 point = A.Y-width/2, 1 point = A.Y+width/2, .... <br> width - height (or width) of the rectangle</p></td>
+<td class="itemdesc"><p>Builds a rectangle whose axis of symmetry is the segment A:B. <br> Creates 0..5 points 4 point equals 0 point. 5 point equals 2 point <br> If A.X&lt;B.X, the zero point is the lower left <br> If A.X&gt;B.X, the zero point is the upper right <br> If A.X=B.X and A.Y&lt;B.Y the zero point is the lower right <br> If A.X=B.X and A.Y&gt;B.Y, the zero point is the upper left <br> Traversing the rectangle clockwise <br> width - height of the rectangle</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="CastleLine2DMath.html#AddRoundBoxTop">AddRoundBoxTop</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
+<td class="itemdesc"><p>Builds a square with one corner rounded on the segment A:B in the direction opposite to the Opposite. EdgesCount - the number of arc segments. Result = arc length.</p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="CastleLine2DMath.html#AddTriangle">AddTriangle</a></td>
@@ -55,29 +65,34 @@
 <tr class="list">
 <td class="itemname"><a class="bold" href="CastleLine2DMath.html#AddTriangleOpposite">AddTriangleOpposite</a></td>
 <td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
-<td class="itemdesc"><p>Builds a rectangular isosceles triangle on the segment A:B in the opposite direction Opposite</p></td>
+<td class="itemdesc"><p>Builds a rectangular isosceles triangle on the segment A:B in the opposite direction Opposite. Hypotenuse - A:B</p></td>
 </tr>
 <tr class="list2">
+<td class="itemname"><a class="bold" href="CastleLine2DMath.html#AddTriangleTop">AddTriangleTop</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
+<td class="itemdesc"><p>Builds a rectangular isosceles triangle on the segment A:B in the direction opposite to the Opposite. Hypotenuse - A:New Point</p></td>
+</tr>
+<tr class="list">
 <td class="itemname"><a class="bold" href="CastleLine2DMath.html#CrossingSegments">CrossingSegments</a></td>
 <td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
 <td class="itemdesc"><p>Intersection of segments A1:A2, B1:B2 <br> 1 if there is one intersection point &quot;CrossPoint&quot; <br> 0 if chunks ar on parallel lines <br> -1 if there are no intersection points</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="CastleLine2DMath.html#DoFloat">DoFloat</a></td>
 <td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
 <td class="itemdesc"><p>Converts StringValue to a number by removing the excess. Remain is a non-removable remainder in a string (can be used to ensure that the '-' at the beginning of the line is not deleted)</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="CastleLine2DMath.html#DoGoodTriangle">DoGoodTriangle</a></td>
 <td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
-<td class="itemdesc"><p>Sorts the vertices of the triangle in clockwise traversal order depending on the &quot;Scale&quot; (in the 2nd and 4th quarters, the order of traversal changes)</p></td>
+<td class="itemdesc"><p>Sorts the vertices of the triangle in clockwise traversal order depending on the &quot;Scale&quot; (in the 2nd and 4th quarters, the order of traversal changes). If changes have been made (B and C have been swapped), it will return true.</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="CastleLine2DMath.html#IsClockwiseTriangle">IsClockwiseTriangle</a></td>
 <td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
 <td class="itemdesc"><p>If the order of traversal of triangle A,B,C is clockwise, then returns <code>True</code></p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="CastleLine2DMath.html#PSDistanceEx">PSDistanceEx</a></td>
 <td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
 <td class="itemdesc"><p>The minimum distance from the point(P) to the segment(SP1:SP2) with the calculation of the projection point (PP) on the segment. 0 - the point is projected onto the segment: Distance = distance from P to the segment SP1,SP2. PP <br> 1 - point P lies &quot;to left&quot; of SP1: Distance = distance from P to SP1. PP=SP1 <br> 2 - point P lies &quot;to right&quot; of SP2: Distance = distance from P to SP2. PP=SP2</p></td>

@@ -36,14 +36,41 @@ TCastleLine2D</p>
 <span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
 <table class="summary wide_list">
 <tr class="list">
-<td class="itemcode"><code><strong><a href="CastleLine2D.html#TJoinMode">TJoinMode</a></strong> = (...);</code></td>
+<td class="itemcode"><code><strong><a href="CastleLine2D.html#TLineTexCoordMode">TLineTexCoordMode</a></strong> = (...);</code></td>
 </tr>
 <tr class="list2">
+<td class="itemcode"><code><strong><a href="CastleLine2D.html#TJoinMode">TJoinMode</a></strong> = (...);</code></td>
+</tr>
+<tr class="list">
 <td class="itemcode"><code><strong><a href="CastleLine2D.html#TBeginEndMode">TBeginEndMode</a></strong> = (...);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="CastleLine2D.html#PBeginEndMode">PBeginEndMode</a></strong>=&circ;<a href="CastleLine2D.html#TBeginEndMode">TBeginEndMode</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="CastleLine2D.html#TJoinTexCoordMode">TJoinTexCoordMode</a></strong> = (...);</code></td>
 </tr>
 </table>
 <h2 class="description">Description</h2>
 <h3 class="detail">Types</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TLineTexCoordMode"></span><code><strong>TLineTexCoordMode</strong> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Type for determining how texture coordinates are calculated.</p>
+<h6 class="description_section">Values</h6>
+<ul>
+<li>
+<span id="cmDefault">cmDefault</span>: Texture coordinates are considered CGE methods</li>
+<li>
+<span id="cmLine">cmLine</span>: Entire height of the texture is used</li>
+<li>
+<span id="cmBeginEndLine">cmBeginEndLine</span>: Allows you to use different areas of the texture for the beginning and the end. Read more <a class="normal" href="CastleLine2D.TCastleLine2D.html#TexCoordMode">TCastleLine2D.TexCoordMode</a></li>
+</ul>
+</td></tr>
+</table>
 <table class="detail wide_list">
 <tr class="list">
 <td class="itemcode"><span id="TJoinMode"></span><code><strong>TJoinMode</strong> = (...);</code></td>
@@ -76,9 +103,42 @@ The type of the beginning and end of the line</p>
 <li>
 <span id="bmRound">bmRound</span>: Semicircle</li>
 <li>
+<span id="bmTopRound">bmTopRound</span>: Rounded square on top</li>
+<li>
+<span id="bmBottomRound">bmBottomRound</span>: Rounded square on bottom</li>
+<li>
 <span id="bmTriangle">bmTriangle</span>: Triangle</li>
 <li>
-<span id="bmBox">bmBox</span>: Half a square</li>
+<span id="bmTopTriangle">bmTopTriangle</span>: Triangle with hypotenuse on top</li>
+<li>
+<span id="bmBottomTriangle">bmBottomTriangle</span>: Triangle with hypotenuse on bottom</li>
+<li>
+<span id="bmHalfBox">bmHalfBox</span>: Half a square</li>
+<li>
+<span id="bmBox">bmBox</span>: Square</li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="PBeginEndMode"></span><code><strong>PBeginEndMode</strong>=&circ;<a href="CastleLine2D.html#TBeginEndMode">TBeginEndMode</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TJoinTexCoordMode"></span><code><strong>TJoinTexCoordMode</strong> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+The method of applying texture to the bends of a line</p>
+<h6 class="description_section">Values</h6>
+<ul>
+<li>
+<span id="jcmStretch">jcmStretch</span>: Stretch texture</li>
+<li>
+<span id="jcmCrop">jcmCrop</span>: Crop texture</li>
 </ul>
 </td></tr>
 </table>

@@ -25,27 +25,37 @@
 <tr class="list">
 <td class="itemname"><a class="bold" href="CastleLine2DMath.html#AddArcBetweenPoints">AddArcBetweenPoints</a></td>
 <td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
-<td class="itemdesc"><p>Строит дугу между точками A,B c центром в точке Center <br> O - точка соединения сегментов (может совпадать с Center) <br> EdgesCount - количество сегментов <br> Полученные треугольники добавляются в Arc</p></td>
+<td class="itemdesc"><p>Строит дугу между точками A,B c центром в точке Center <br> O - точка соединения сегментов (может совпадать с Center) <br> EdgesCount - количество сегментов <br> Полученные треугольники добавляются в Arc <br> Result = длинна дуги</p></td>
 </tr>
 <tr class="list2">
-<td class="itemname"><a class="bold" href="CastleLine2DMath.html#AddCrossSegments">AddCrossSegments</a></td>
+<td class="itemname"><a class="bold" href="CastleLine2DMath.html#AddBox">AddBox</a></td>
 <td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
-<td class="itemdesc"><p>Добавит треугольники для соединения двух отрезков в точке пересечения вне этих отрезков. A1:A2 первый отрезок. B1:B2 второй отрезок. O - точка соединения треугольников. <br> В результате построит треугольники (O,A2,cross) и (O,B2,cross).</p></td>
+<td class="itemdesc"><p>Строит квадрат на отрезке А:B в направлении противоположном Opposite</p></td>
 </tr>
 <tr class="list">
+<td class="itemname"><a class="bold" href="CastleLine2DMath.html#AddCrossSegments">AddCrossSegments</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
+<td class="itemdesc"><p>Добавит треугольники для соединения двух отрезков в точке пересечения вне этих отрезков. A1:A2 первый отрезок. B1:B2 второй отрезок. O - точка соединения треугольников. <br> В результате построит треугольники (O,A2,cross) и (O,B2,cross). <br> Result = длина построенных отрезков.</p></td>
+</tr>
+<tr class="list2">
 <td class="itemname"><a class="bold" href="CastleLine2DMath.html#AddHalfBox">AddHalfBox</a></td>
 <td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
 <td class="itemdesc"><p>Строит половину квадрат на отрезке А:B в направлении противоположном Opposite</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="CastleLine2DMath.html#AddHalfCircle">AddHalfCircle</a></td>
 <td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
 <td class="itemdesc"><p>Строит полукруг на отрезке А:B в направлении противоположном Opposite <br> EdgesCount - количество сегментов <br> Полученные треугольники добавляются в Arc</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="CastleLine2DMath.html#AddRect">AddRect</a></td>
 <td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
-<td class="itemdesc"><p>Строит прямоугольник осью симметрии которого является отрезок A:B. <br> Создает 0..5 точек 4 точка равна 0 точке. 5 точка равна 2 точке <br> 0 точка это A.Y-width/2, 1 это A.Y+width/2, .... <br> width - высота (или ширина) прямоугольника</p></td>
+<td class="itemdesc"><p>Строит прямоугольник осью симметрии которого является отрезок A:B. <br> Создает 0..5 точек 4 точка равна 0 точке. 5 точка равна 2 точке <br> При A.X&lt;B.X нулевая точка это левая нижняя <br> При A.X&gt;B.X нулевая точка это правая верхняя <br> Если A.X=B.X и A.Y&lt;B.Y нулевая точка это правая нижняя <br> Если A.X=B.X и A.Y&gt;B.Y нулевая точка это левая верхняя <br> Обход прямоугольника по часовой стрелке <br> width - высота прямоугольника</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="CastleLine2DMath.html#AddRoundBoxTop">AddRoundBoxTop</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
+<td class="itemdesc"><p>Строит квадрат у которого скруглен один угол на отрезке А:B в направлении противоположном Opposite. EdgesCount количество сегментов дуги. Result = длинна дуги.</p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="CastleLine2DMath.html#AddTriangle">AddTriangle</a></td>
@@ -55,57 +65,67 @@
 <tr class="list">
 <td class="itemname"><a class="bold" href="CastleLine2DMath.html#AddTriangleOpposite">AddTriangleOpposite</a></td>
 <td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
-<td class="itemdesc"><p>Строит прямоугольный равнобедренный треугольник на отрезке А:B в направлении противоположном Opposite</p></td>
+<td class="itemdesc"><p>Строит прямоугольный равнобедренный треугольник на отрезке А:B в направлении противоположном Opposite. Гипотенуза - A:B</p></td>
 </tr>
 <tr class="list2">
+<td class="itemname"><a class="bold" href="CastleLine2DMath.html#AddTriangleTop">AddTriangleTop</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
+<td class="itemdesc"><p>Строит прямоугольный равнобедренный треугольник на отрезке А:B в направлении противоположном Opposite. Гипотенуза A:NewPoint</p></td>
+</tr>
+<tr class="list">
 <td class="itemname"><a class="bold" href="CastleLine2DGizmos.html#BORDER_DISTANCE">BORDER_DISTANCE</a></td>
 <td class="itemunit"><a class="bold" href="CastleLine2DGizmos.html">CastleLine2DGizmos</a></td>
 <td class="itemdesc"><p>Расстояние до границы в частях от текущей высоты камеры</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="CastleLine2DMath.html#CrossingSegments">CrossingSegments</a></td>
 <td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
 <td class="itemdesc"><p>Пересечение отрезков A1:A2, B1:B2. <br> 1 Если есть точка пересечения &quot;CrossPoint&quot; <br> 0 если это параллельные линии <br> -1 если нет точек пересечения</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="CastleLine2DGizmos.html#DISTANCE_INSERT_POINT">DISTANCE_INSERT_POINT</a></td>
 <td class="itemunit"><a class="bold" href="CastleLine2DGizmos.html">CastleLine2DGizmos</a></td>
 <td class="itemdesc"><p>Расстояние до точки при котором точка вставляется на линию в частях от текущей высоты камеры</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="CastleLine2DGizmos.html#DISTANCE_SELECTED_POINT">DISTANCE_SELECTED_POINT</a></td>
 <td class="itemunit"><a class="bold" href="CastleLine2DGizmos.html">CastleLine2DGizmos</a></td>
 <td class="itemdesc"><p>Расстояние до точки при котором точка выделяется в частях от текущей высоты камеры</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="CastleLine2DMath.html#DoFloat">DoFloat</a></td>
 <td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
 <td class="itemdesc"><p>Преобразует строку StringValue в число путем удаления лишнего. Remain это неудаляемый остаток в строке (можно использовать для того, чтобы '-' в начале строки не удалялся)</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="CastleLine2DMath.html#DoGoodTriangle">DoGoodTriangle</a></td>
 <td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
-<td class="itemdesc"><p>Сортирует вершины треугольника в порядок обхода по часовой стрелке в зависимости от Scale (во 2 и 4 четвертях порядок обхода меняется)</p></td>
+<td class="itemdesc"><p>Сортирует вершины треугольника в порядок обхода по часовой стрелке в зависимости от Scale (во 2 и 4 четвертях порядок обхода меняется). <br> Если произведены изменения (поменялись местами B и С), то вернет true.</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="CastleLine2DGizmos.html#FONT_SIZE">FONT_SIZE</a></td>
 <td class="itemunit"><a class="bold" href="CastleLine2DGizmos.html">CastleLine2DGizmos</a></td>
 <td class="itemdesc"><p>Размер шрифта</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="CastleLine2DMath.html#IsClockwiseTriangle">IsClockwiseTriangle</a></td>
 <td class="itemunit"><a class="bold" href="CastleLine2DMath.html">CastleLine2DMath</a></td>
 <td class="itemdesc"><p>Если порядок обхода треугольника A,B,C по часовой стрелке, то вернет <code>True</code></p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="CastleLine2DGizmos.html#Line2DGizmos">Line2DGizmos</a></td>
 <td class="itemunit"><a class="bold" href="CastleLine2DGizmos.html">CastleLine2DGizmos</a></td>
 <td class="itemdesc"><p>Этот объект используется для редактирования всех потомков <a class="normal" href="CastleLine2DBase.TCastleLine2DBase.html">TCastleLine2DBase</a> в редакторе CGE. При входе в режим редактирования этому объекту назначается новый родитель методом Show(ALine:TCastleLine2DBase).</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="CastleLine2DGizmos.html#LINE_WIDTH_EDITOR">LINE_WIDTH_EDITOR</a></td>
 <td class="itemunit"><a class="bold" href="CastleLine2DGizmos.html">CastleLine2DGizmos</a></td>
 <td class="itemdesc"><p>Ширина линии для редактирования</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="CastleLine2D.html#PBeginEndMode">PBeginEndMode</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2D.html">CastleLine2D</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="CastleLine2DGizmos.html#POINT_SIZE">POINT_SIZE</a></td>
@@ -164,6 +184,16 @@
 <td class="itemdesc"><p>Тип соединения прямоугольников в линии</p></td>
 </tr>
 <tr class="list2">
+<td class="itemname"><a class="bold" href="CastleLine2D.html#TJoinTexCoordMode">TJoinTexCoordMode</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2D.html">CastleLine2D</a></td>
+<td class="itemdesc"><p>Способ наложения текстуры на изгибы линии</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="CastleLine2D.html#TLineTexCoordMode">TLineTexCoordMode</a></td>
+<td class="itemunit"><a class="bold" href="CastleLine2D.html">CastleLine2D</a></td>
+<td class="itemdesc"><p>Тип для определения способа вычесления текстурных координат</p></td>
+</tr>
+<tr class="list2">
 <td class="itemname"><a class="bold" href="UPointEditor.TPointEditor.html">TPointEditor</a></td>
 <td class="itemunit"><a class="bold" href="UPointEditor.html">UPointEditor</a></td>
 <td class="itemdesc"><p>Класс для окна редактирования конкретной точки (вершины) <a class="normal" href="CastleLine2DBase.TCastleLine2DBase.html#Points">TCastleLine2DBase.Points[i]</a> из редактора. Окно редактирования вызывается путем нажатия средней кнопкой мыши по выбранной точке в редакторе CGE.</p></td>
@@ -179,6 +209,11 @@
 <td class="itemdesc"><p>Класс содержит методы для создания и вызова окна редактирования набора точек (вершин) <a class="normal" href="CastleLine2DBase.TCastleLine2DBase.html#Points">TCastleLine2DBase.Points</a> в инспекторе объектов.</p></td>
 </tr>
 <tr class="list">
+<td class="itemname"><a class="bold" href="CastlePolygon2D.html#TPolygonTexCoordMode">TPolygonTexCoordMode</a></td>
+<td class="itemunit"><a class="bold" href="CastlePolygon2D.html">CastlePolygon2D</a></td>
+<td class="itemdesc"><p>Тип для определения способа вычисления текстурных координат</p></td>
+</tr>
+<tr class="list2">
 <td class="itemname"><a class="bold" href="UPointsEditor.TStringGridWithOnPasteFromClipboard.html">TStringGridWithOnPasteFromClipboard</a></td>
 <td class="itemunit"><a class="bold" href="UPointsEditor.html">UPointsEditor</a></td>
 <td class="itemdesc"><p>TStringGrid дополненный событием которое возникает после вставки из буфера обмена. Используется в <a class="normal" href="UPointsEditor.TPointsEditor.html">TPointsEditor</a></p></td>

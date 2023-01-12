@@ -20,7 +20,7 @@
 <div class="one_section"><a class="section" href="#PasDoc-Description">Описание</a></div><div class="one_section">Используемые модули</div><div class="one_section">Классы, интерфейсы и объекты</div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Процедуры и функции</a></div><div class="one_section">Типы</div><div class="one_section">Константы</div><div class="one_section">Переменные</div></div>
 <span id="PasDoc-Description"></span><h2 class="description">Описание</h2>
 <p>
-Модуль содержит некоторые математические методы, а так же методы для построения некоторых примитивов.</p>
+Модуль содержит некоторые математические методы, а также методы для построения некоторых примитивов.</p>
 <span id="PasDoc-Uses"></span><h2 class="overview">Обзор</h2>
 <span id="PasDoc-FuncsProcs"></span><h3 class="summary">Процедуры и функции</h3>
 <table class="summary wide_list">
@@ -37,28 +37,37 @@
 <td class="itemcode"><code>function <strong><a href="CastleLine2DMath.html#IsClockwiseTriangle">IsClockwiseTriangle</a></strong>(A,B,C:TVector2):boolean;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>procedure <strong><a href="CastleLine2DMath.html#AddArcBetweenPoints">AddArcBetweenPoints</a></strong>(var Arc:TVector2List; const Center,O,A,B:TVector2; const EdgesCount:integer);</code></td>
+<td class="itemcode"><code>function <strong><a href="CastleLine2DMath.html#AddArcBetweenPoints">AddArcBetweenPoints</a></strong>(var Arc:TVector2List; const Center,O,A,B:TVector2; const EdgesCount:integer):single;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>procedure <strong><a href="CastleLine2DMath.html#AddHalfCircle">AddHalfCircle</a></strong>(var Arc:TVector2List; const A,B:TVector2; const EdgesCount:integer; const Opposite:Tvector2);</code></td>
+<td class="itemcode"><code>procedure <strong><a href="CastleLine2DMath.html#AddRoundBoxTop">AddRoundBoxTop</a></strong>(var Arc:TVector2List; const A,B:TVector2; const Opposite:Tvector2; const EdgesCount:integer);</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>procedure <strong><a href="CastleLine2DMath.html#AddTriangle">AddTriangle</a></strong>(var Arc:TVector2List; const A,B,C:TVector2);</code></td>
+<td class="itemcode"><code>procedure <strong><a href="CastleLine2DMath.html#AddHalfCircle">AddHalfCircle</a></strong>(var Arc:TVector2List; const A,B:TVector2; const EdgesCount:integer; const Opposite:Tvector2);</code></td>
 </tr>
 <tr class="list2">
+<td class="itemcode"><code>procedure <strong><a href="CastleLine2DMath.html#AddTriangle">AddTriangle</a></strong>(var Arc:TVector2List; const A,B,C:TVector2);</code></td>
+</tr>
+<tr class="list">
 <td class="itemcode"><code>procedure <strong><a href="CastleLine2DMath.html#AddTriangleOpposite">AddTriangleOpposite</a></strong>(var Arc:TVector2List; const A,B:TVector2; const Opposite:Tvector2);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <strong><a href="CastleLine2DMath.html#AddTriangleTop">AddTriangleTop</a></strong>(var Arc:TVector2List; const A,B:TVector2; const Opposite:Tvector2);</code></td>
 </tr>
 <tr class="list">
 <td class="itemcode"><code>procedure <strong><a href="CastleLine2DMath.html#AddHalfBox">AddHalfBox</a></strong>(var Arc:TVector2List; const A,B:TVector2; const Opposite:Tvector2);</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>procedure <strong><a href="CastleLine2DMath.html#AddRect">AddRect</a></strong>(var Arc:TVector2List; const A,B:TVector2; width:single);</code></td>
+<td class="itemcode"><code>procedure <strong><a href="CastleLine2DMath.html#AddBox">AddBox</a></strong>(var Arc:TVector2List; const A,B:TVector2; const Opposite:Tvector2);</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>procedure <strong><a href="CastleLine2DMath.html#AddCrossSegments">AddCrossSegments</a></strong>(var Arc:TVector2List; const O,A1,A2,B1,B2:TVector2);</code></td>
+<td class="itemcode"><code>procedure <strong><a href="CastleLine2DMath.html#AddRect">AddRect</a></strong>(var Arc:TVector2List; const A,B:TVector2; width:single);</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>procedure <strong><a href="CastleLine2DMath.html#DoGoodTriangle">DoGoodTriangle</a></strong>(var Lt:TVector2List; A,B,C:integer; Scale:TVector2);</code></td>
+<td class="itemcode"><code>function <strong><a href="CastleLine2DMath.html#AddCrossSegments">AddCrossSegments</a></strong>(var Arc:TVector2List; const O,A1,A2,B1,B2:TVector2):single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <strong><a href="CastleLine2DMath.html#DoGoodTriangle">DoGoodTriangle</a></strong>(var Lt:TVector2List; A,B,C:integer; Scale:TVector2):boolean;</code></td>
 </tr>
 </table>
 <h2 class="description">Описание</h2>
@@ -101,11 +110,20 @@
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="AddArcBetweenPoints"></span><code>procedure <strong>AddArcBetweenPoints</strong>(var Arc:TVector2List; const Center,O,A,B:TVector2; const EdgesCount:integer);</code></td>
+<td class="itemcode"><span id="AddArcBetweenPoints"></span><code>function <strong>AddArcBetweenPoints</strong>(var Arc:TVector2List; const Center,O,A,B:TVector2; const EdgesCount:integer):single;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
-Строит дугу между точками A,B c центром в точке Center <br> O - точка соединения сегментов (может совпадать с Center) <br> EdgesCount - количество сегментов <br> Полученные треугольники добавляются в Arc</p>
+Строит дугу между точками A,B c центром в точке Center <br> O - точка соединения сегментов (может совпадать с Center) <br> EdgesCount - количество сегментов <br> Полученные треугольники добавляются в Arc <br> Result = длинна дуги</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="AddRoundBoxTop"></span><code>procedure <strong>AddRoundBoxTop</strong>(var Arc:TVector2List; const A,B:TVector2; const Opposite:Tvector2; const EdgesCount:integer);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Строит квадрат у которого скруглен один угол на отрезке А:B в направлении противоположном Opposite. EdgesCount количество сегментов дуги. Result = длинна дуги.</p>
 </td></tr>
 </table>
 <table class="detail wide_list">
@@ -132,7 +150,16 @@
 </tr>
 <tr><td colspan="1">
 <p>
-Строит прямоугольный равнобедренный треугольник на отрезке А:B в направлении противоположном Opposite</p>
+Строит прямоугольный равнобедренный треугольник на отрезке А:B в направлении противоположном Opposite. Гипотенуза - A:B</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="AddTriangleTop"></span><code>procedure <strong>AddTriangleTop</strong>(var Arc:TVector2List; const A,B:TVector2; const Opposite:Tvector2);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Строит прямоугольный равнобедренный треугольник на отрезке А:B в направлении противоположном Opposite. Гипотенуза A:NewPoint</p>
 </td></tr>
 </table>
 <table class="detail wide_list">
@@ -146,29 +173,38 @@
 </table>
 <table class="detail wide_list">
 <tr class="list">
+<td class="itemcode"><span id="AddBox"></span><code>procedure <strong>AddBox</strong>(var Arc:TVector2List; const A,B:TVector2; const Opposite:Tvector2);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Строит квадрат на отрезке А:B в направлении противоположном Opposite</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
 <td class="itemcode"><span id="AddRect"></span><code>procedure <strong>AddRect</strong>(var Arc:TVector2List; const A,B:TVector2; width:single);</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
-Строит прямоугольник осью симметрии которого является отрезок A:B. <br> Создает 0..5 точек 4 точка равна 0 точке. 5 точка равна 2 точке <br> 0 точка это A.Y-width/2, 1 это A.Y+width/2, .... <br> width - высота (или ширина) прямоугольника</p>
+Строит прямоугольник осью симметрии которого является отрезок A:B. <br> Создает 0..5 точек 4 точка равна 0 точке. 5 точка равна 2 точке <br> При A.X&lt;B.X нулевая точка это левая нижняя <br> При A.X&gt;B.X нулевая точка это правая верхняя <br> Если A.X=B.X и A.Y&lt;B.Y нулевая точка это правая нижняя <br> Если A.X=B.X и A.Y&gt;B.Y нулевая точка это левая верхняя <br> Обход прямоугольника по часовой стрелке <br> width - высота прямоугольника</p>
 </td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="AddCrossSegments"></span><code>procedure <strong>AddCrossSegments</strong>(var Arc:TVector2List; const O,A1,A2,B1,B2:TVector2);</code></td>
+<td class="itemcode"><span id="AddCrossSegments"></span><code>function <strong>AddCrossSegments</strong>(var Arc:TVector2List; const O,A1,A2,B1,B2:TVector2):single;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
-Добавит треугольники для соединения двух отрезков в точке пересечения вне этих отрезков. A1:A2 первый отрезок. B1:B2 второй отрезок. O - точка соединения треугольников. <br> В результате построит треугольники (O,A2,cross) и (O,B2,cross).</p>
+Добавит треугольники для соединения двух отрезков в точке пересечения вне этих отрезков. A1:A2 первый отрезок. B1:B2 второй отрезок. O - точка соединения треугольников. <br> В результате построит треугольники (O,A2,cross) и (O,B2,cross). <br> Result = длина построенных отрезков.</p>
 </td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="DoGoodTriangle"></span><code>procedure <strong>DoGoodTriangle</strong>(var Lt:TVector2List; A,B,C:integer; Scale:TVector2);</code></td>
+<td class="itemcode"><span id="DoGoodTriangle"></span><code>function <strong>DoGoodTriangle</strong>(var Lt:TVector2List; A,B,C:integer; Scale:TVector2):boolean;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
-Сортирует вершины треугольника в порядок обхода по часовой стрелке в зависимости от Scale (во 2 и 4 четвертях порядок обхода меняется)</p>
+Сортирует вершины треугольника в порядок обхода по часовой стрелке в зависимости от Scale (во 2 и 4 четвертях порядок обхода меняется). <br> Если произведены изменения (поменялись местами B и С), то вернет true.</p>
 </td></tr>
 </table>
 <hr><span class="appinfo"><em>Сгенерировал <a href="https://pasdoc.github.io/">PasDoc 0.16.0</a>. </em>

@@ -17,7 +17,7 @@
 <p align="right"><a href="../ru/index.html">Русский</a> | <a  href="../en/index.html">English</a> </p>
 <span id="TCastleLine2D"></span><h1 class="cio">Class TCastleLine2D</h1>
 <div class="sections">
-<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hierarchy</a></div><div class="one_section">Fields</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Methods</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Properties</a></div></div>
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hierarchy</a></div><div class="one_section"><a class="section" href="#PasDoc-Fields">Fields</a></div><div class="one_section"><a class="section" href="#PasDoc-Methods">Methods</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Properties</a></div></div>
 <span id="PasDoc-Description"></span><h2 class="unit">Unit</h2>
 <p class="unitlink">
 <a href="CastleLine2D.html">CastleLine2D</a></p>
@@ -31,6 +31,17 @@ A polyline consists of rectangles. Has different connection methods for rectangl
 <ul class="hierarchy"><li class="ancestor">TCastleAbstractPrimitive</li>
 <li class="ancestor"><a class="normal" href="CastleLine2DBase.TCastleLine2DBase.html">TCastleLine2DBase</a></li>
 <li class="thisitem">TCastleLine2D</li></ul><h2 class="overview">Overview</h2>
+<span id="PasDoc-Fields"></span><h3 class="summary">Fields</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code><strong><a href="CastleLine2D.TCastleLine2D.html#FTexY">FTexY</a></strong>:single;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code><strong><a href="CastleLine2D.TCastleLine2D.html#FTexX">FTexX</a></strong>:single;</code></td>
+</tr>
+</table>
 <span id="PasDoc-Methods"></span><h3 class="summary">Methods</h3>
 <table class="summary wide_list">
 <tr class="list">
@@ -38,14 +49,26 @@ A polyline consists of rectangles. Has different connection methods for rectangl
 <td class="itemcode"><code>procedure <strong><a href="CastleLine2D.TCastleLine2D.html#ChangedTransform">ChangedTransform</a></strong>; override;</code></td>
 </tr>
 <tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code>procedure <strong><a href="CastleLine2D.TCastleLine2D.html#AddGeometryBeginEnd">AddGeometryBeginEnd</a></strong>(const BeginOrEnd:<a href="CastleLine2D.html#PBeginEndMode">PBeginEndMode</a>; var GList:TVector2List; const A,B,Opposite:TVector2); virtual;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code>procedure <strong><a href="CastleLine2D.TCastleLine2D.html#SetTexCoordMode">SetTexCoordMode</a></strong>(cm:<a href="CastleLine2D.html#TLineTexCoordMode">TLineTexCoordMode</a>);</code></td>
+</tr>
+<tr class="list2">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
 <td class="itemcode"><code>constructor <strong><a href="CastleLine2D.TCastleLine2D.html#Create">Create</a></strong>(AOwner: TComponent); override;</code></td>
 </tr>
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code>procedure <strong><a href="CastleLine2D.TCastleLine2D.html#ReLoad">ReLoad</a></strong>; override;</code></td>
+<td class="itemcode"><code>destructor <strong><a href="CastleLine2D.TCastleLine2D.html#Destroy">Destroy</a></strong>; override;</code></td>
 </tr>
 <tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a href="CastleLine2D.TCastleLine2D.html#ReLoad">ReLoad</a></strong>; override;</code></td>
+</tr>
+<tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
 <td class="itemcode"><code>function <strong><a href="CastleLine2D.TCastleLine2D.html#PropertySections">PropertySections</a></strong>(const PropertyName: String): TPropertySections; override;</code></td>
 </tr>
@@ -76,8 +99,37 @@ A polyline consists of rectangles. Has different connection methods for rectangl
 <td class="visibility"><a href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
 <td class="itemcode"><code>property <strong><a href="CastleLine2D.TCastleLine2D.html#LineWidth">LineWidth</a></strong>: Single read FLineWidth write SetLineWidth default 10;</code></td>
 </tr>
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><code>property <strong><a href="CastleLine2D.TCastleLine2D.html#TexCoordMode">TexCoordMode</a></strong>: <a href="CastleLine2D.html#TLineTexCoordMode">TLineTexCoordMode</a> read FTexCoordMode write <a href="CastleLine2D.TCastleLine2D.html#SetTexCoordMode">SetTexCoordMode</a> default <a href="CastleLine2D.html#cmDefault">cmDefault</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><code>property <strong><a href="CastleLine2D.TCastleLine2D.html#JoinTexCoordMode">JoinTexCoordMode</a></strong>: <a href="CastleLine2D.html#TJoinTexCoordMode">TJoinTexCoordMode</a> read FJoinTexCoordMode write FJoinTexCoordMode default <a href="CastleLine2D.html#jcmCrop">jcmCrop</a>;</code></td>
+</tr>
 </table>
 <h2 class="description">Description</h2>
+<h3 class="detail">Fields</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><span id="FTexY"></span><code><strong>FTexY</strong>:single;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Coefficient for correct texture mapping. Determines which part of the texture along the Y axis should be used. When TexCoordMode=cmLine is 1. When TexCoordMode=cmBeginEndLine is 0.5</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><span id="FTexX"></span><code><strong>FTexX</strong>:single;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+X-axis coefficient for correct texture mapping. Usually equal to (Texture height)/(Line width*Texture width)</p>
+</td></tr>
+</table>
 <h3 class="detail">Methods</h3>
 <table class="detail wide_list">
 <tr class="list">
@@ -89,6 +141,26 @@ A polyline consists of rectangles. Has different connection methods for rectangl
 </table>
 <table class="detail wide_list">
 <tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><span id="AddGeometryBeginEnd"></span><code>procedure <strong>AddGeometryBeginEnd</strong>(const BeginOrEnd:<a href="CastleLine2D.html#PBeginEndMode">PBeginEndMode</a>; var GList:TVector2List; const A,B,Opposite:TVector2); virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Add the geometry of the beginning and end of the line. A,B - the segment where the geometry is attached. <br> Opposite - the geometry will be built in the opposite direction from this point. <br> GList - you need to add geometry here. <br> BeginOrEnd - pointer to <a class="normal" href="CastleLine2D.TCastleLine2D.html#JoinBeginMode">TCastleLine2D.JoinBeginMode</a> or to <a class="normal" href="CastleLine2D.TCastleLine2D.html#JoinEndMode">TCastleLine2D.JoinEndMode</a>. <br> Inherited classes should override the method if a new geometry needs to be added.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><span id="SetTexCoordMode"></span><code>procedure <strong>SetTexCoordMode</strong>(cm:<a href="CastleLine2D.html#TLineTexCoordMode">TLineTexCoordMode</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Sets the <a class="normal" href="CastleLine2D.TCastleLine2D.html#TexCoordMode">TCastleLine2D.TexCoordMode</a> and <a class="normal" href="CastleLine2D.TCastleLine2D.html#FTexY">TCastleLine2D.FTexY</a> and <a class="normal" href="CastleLine2D.TCastleLine2D.html#FTexX">TCastleLine2D.FTexX</a>.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
 <td class="itemcode"><span id="Create"></span><code>constructor <strong>Create</strong>(AOwner: TComponent); override;</code></td>
 </tr>
@@ -96,6 +168,14 @@ A polyline consists of rectangles. Has different connection methods for rectangl
 <p>
 When created in the CGE editor, creates a line of two points. When creating directly in the code (RunTime), points are not added.</p>
 </td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Destroy"></span><code>destructor <strong>Destroy</strong>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
@@ -172,6 +252,26 @@ The type of the end of the line</p>
 <tr><td colspan="2">
 <p>
 Line width</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><span id="TexCoordMode"></span><code>property <strong>TexCoordMode</strong>: <a href="CastleLine2D.html#TLineTexCoordMode">TLineTexCoordMode</a> read FTexCoordMode write <a href="CastleLine2D.TCastleLine2D.html#SetTexCoordMode">SetTexCoordMode</a> default <a href="CastleLine2D.html#cmDefault">cmDefault</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Method for calculating texture coordinates. <br> With <strong>cmDefault</strong>, texture coordinates are set by CGE methods. <br> With <strong>cmLine</strong> the line repeats the texture as it lengthens. The texture can be any. <br> With <strong>cmBeginEndLine</strong>, different areas of the texture are used for the beginning and end. The texture must be specially prepared. <br> Examples of textures for <strong>cmBeginEndLine</strong>: <img src="image_5.png" alt="BeginEndLine1" /> or <img src="image_6.png" alt="BeginEndLine2" /> or <img src="image_7.png" alt="BeginEndLine3" /></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="published.gif" alt="Published" title="Published"></a></td>
+<td class="itemcode"><span id="JoinTexCoordMode"></span><code>property <strong>JoinTexCoordMode</strong>: <a href="CastleLine2D.html#TJoinTexCoordMode">TJoinTexCoordMode</a> read FJoinTexCoordMode write FJoinTexCoordMode default <a href="CastleLine2D.html#jcmCrop">jcmCrop</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+The method for calculating texture coordinates on line bends. When JoinMode=jmSharp is not used.</p>
 </td></tr>
 </table>
 <hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 0.16.0</a>. </em>

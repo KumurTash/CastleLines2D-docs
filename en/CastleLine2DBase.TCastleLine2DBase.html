@@ -58,13 +58,17 @@ Base class for shapes that are defined by a set of vertices <a class="normal" hr
 </tr>
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code>constructor <strong><a href="CastleLine2DBase.TCastleLine2DBase.html#Create">Create</a></strong>(AOwner: TComponent); override;</code></td>
+<td class="itemcode"><code>function <strong><a href="CastleLine2DBase.TCastleLine2DBase.html#SelfIntersections">SelfIntersections</a></strong>:boolean;</code></td>
 </tr>
 <tr class="list2">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code>destructor <strong><a href="CastleLine2DBase.TCastleLine2DBase.html#Destroy">Destroy</a></strong>; override;</code></td>
+<td class="itemcode"><code>constructor <strong><a href="CastleLine2DBase.TCastleLine2DBase.html#Create">Create</a></strong>(AOwner: TComponent); override;</code></td>
 </tr>
 <tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>destructor <strong><a href="CastleLine2DBase.TCastleLine2DBase.html#Destroy">Destroy</a></strong>; override;</code></td>
+</tr>
+<tr class="list2">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
 <td class="itemcode"><code>function <strong><a href="CastleLine2DBase.TCastleLine2DBase.html#PropertySections">PropertySections</a></strong>(const PropertyName: String): TPropertySections; override;</code></td>
 </tr>
@@ -140,6 +144,16 @@ Save points <a class="normal" href="CastleLine2DBase.TCastleLine2DBase.html#Poin
 <tr><td colspan="2">
 <p>
 Load points <a class="normal" href="CastleLine2DBase.TCastleLine2DBase.html#Points">Points</a> from a file</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SelfIntersections"></span><code>function <strong>SelfIntersections</strong>:boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Checking for self-intersection.</p>
 </td></tr>
 </table>
 <table class="detail wide_list">
